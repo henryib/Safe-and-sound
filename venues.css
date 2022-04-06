@@ -320,10 +320,6 @@ main .venues {
     margin-top: 2rem;
 }
 
-main.venues h2 {
-    margin-bottom: 0.8rem;
-}
-
 main .venues table{
     background: var(--sidebar-color);
     width: 100%;
