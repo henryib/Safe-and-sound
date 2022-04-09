@@ -13,16 +13,30 @@
     </head>
 
     <body>
-        <form class="box" action="index.html" method="post">
+        <form class="box" action="index.html" method="post" autocomplete="off">
+
             <h1>Register</h1>
-            <input type="text" name="firstname" placeholder="First name">
-            <input type="text" name="lastname" placeholder="Last name">
-            <input type="text" name="badgenumber" placeholder="Badge number">
-            <input type="text" name="badgenumber2" placeholder="Re-enter Badge number">
-            <input type="password" name="password" placeholder="Password">
-            <input type="password" name="password2" placeholder="Re-enter Password">
+
+            <input type="text" id="badgenumber" name="badgenumber" placeholder="Badge number" minLength="6" maxlength="6" pattern="[0-9]+" onchange ="checkBadgeNumber()"
+                title="Please enter your 6 digit badge number" required>
+
+            <input type="text" id="badgenumber-repeat" name="badgenumber-repeat" placeholder="Re-enter Badge number" minLength="6" maxlength="6" pattern="[0-9]+" onkeyup ="checkBadgeNumber()"
+                title="Please enter the same 6 digit badge number" required>
+
+            <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange ="checkPassword()"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+            <input type="password" id="password-repeat" name="password-repeat" placeholder="Re-enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeyup ="checkPassword()"
+            title="Please enter the same password as above" required>
+
+            <input type="checkbox" id="checkbox" onclick="passwordToggle()">
+            <label for="checkbox">Show Password</label>
+
             <input type="submit" name="" value="Submit">
+
             <p>Already registered? <a href="login.html">Login</a></p>
         </form>
+
+        <script src="register.js"></script>
     </body>
 </html>

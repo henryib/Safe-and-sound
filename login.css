@@ -47,7 +47,12 @@
   width: 280px;
 }
 
+.box label {
+  font-size: 14px;
+}
+
 .box input[type="submit"] {
+  display: block;
   border: none;
   color: #eeb7d5;
   border-radius: 24px;

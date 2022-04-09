@@ -13,12 +13,24 @@
     </head>
 
     <body>
-        <form class="box" action="index.html" method="post">
+        <form class="box" action="index.html" method="post" autocomplete="off">
+
             <h1>Login</h1>
-            <input type="text" name="badgenumber" placeholder="Badge number">
-            <input type="password" name="password" placeholder="Password">
-                <input type="submit" name="" value="Login">
+
+            <input type="text" id="badgenumber" name="badgenumber" placeholder="Badge number" minLength="6" maxlength="6" pattern="[0-9]+"
+                title="Please enter your 6 digit badge number" required>
+
+            <input type="password" id="password" name="password" placeholder="Password"
+                title="Please enter your password" required>
+
+            <input type="checkbox" id="checkbox" onclick="passwordToggle()">
+            <label for="checkbox">Show Password</label>
+
+            <input type="submit" value="Login">
+            
             <p>Not registered? <a href="register.html">Register</a></p>
         </form>
+
+        <script src="login.js"></script>
     </body>
 </html>
