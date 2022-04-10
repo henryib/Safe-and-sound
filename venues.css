@@ -338,7 +338,7 @@ main table tbody td{
     height:  2.8rem;
     border-bottom: 1px solid var(--body-color);
     padding: 1.2rem;
-    width: 20%;
+    width: 16%;
 }
 
 main table tbody tr:last-child td{
@@ -347,6 +347,14 @@ main table tbody tr:last-child td{
 
 main table tbody tr:hover{
     background: var(--primary-color-light);
+}
+
+main table tbody button{
+    color: var(--sidebar-color);
+    background: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
 }
 
 main .venues .pagination{
