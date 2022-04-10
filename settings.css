@@ -325,7 +325,7 @@ main span {
     padding-right: 10rem;
 }
 
-main .password input[type="password"] {
+main .password input[type="password"], main .password input[type="text"] {
     border: none;
     background: white;
     padding: 14px 10px;
@@ -337,6 +337,10 @@ main .password input[type="password"] {
     -webkit-transition: 0.25s;
     transition: 0.25s;
     outline: none;
+  }
+
+  main label {
+    font-size: 14px;
   }
 
   main .password input[type="submit"] {
