@@ -1,21 +1,19 @@
-/* Google Font Import - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   background: #e5e9f1;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
 }
 
 .box {
-  width: 400px;
+  width: 30%;
   padding: 50px;
   background-color: none;
   top: 50%;
   left: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 24px;
   border: 5px solid white;
@@ -23,29 +21,25 @@
 
 .box h1 {
   margin: 0;
-  padding: 0px 0px 20px;
+  padding: 20px;
   text-align: center;
   font-size: 36px;
   font-weight: 600;
   color: #7f88c0;
 }
 
-.box input[type="text"], .box input[type="password"] {
+.box input[type="text"],
+.box input[type="password"] {
   border: none;
   background: white;
-  padding: 14px 10px;
-  width: 200px;
-  display: block;
-  margin: 10px auto;
+  padding: 10px;
+  width: 95%;
+  margin-top: 20px;
   text-align: left;
-  border-radius: 24px;
+  border-radius: 8px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   outline: none;
-}
-
-.box input[type="text"]:focus, .box input[type="password"]:focus {
-  width: 280px;
 }
 
 .box label {
@@ -53,19 +47,32 @@
 }
 
 .box input[type="submit"] {
-  display: block;
-  border: none;
+  border: 2px solid #7f88c0;
+  font-weight: 600;
+  font-size: 1.2em;
   color: #eeb7d5;
-  border-radius: 24px;
-  margin: 20px auto;
-  padding: 14px 10px;
-  width: 150px;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
   background: white;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .box input[type="submit"]:hover {
+  transition: 0.3s ease-in-out;
   color: #eeb7d5;
   background: #7f88c0;
+}
+
+#response {
+  display: none;
+  width: 95%;
+  margin-top: 20px;
+  border: 2px solid #bf314a;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f7dfe3;
 }
 /*# sourceMappingURL=login.css.map */

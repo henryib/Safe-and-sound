@@ -1,221 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
     <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
-    <title>Home - Safe & Sound</title> 
-</head>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Safe & Sound</title>
+  </head>
+  <body>
     <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="logo.png" alt="">
-                </span>
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="logo.png" alt="" />
+          </span>
 
-                <div class="text logo-text">
-                    <span class="name">Safe & Sound</span>
-                    <span class="profession">Police Build</span>
-                </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="index.html">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="register.html">
-                            <i class='bx bx-registered icon' ></i>
-                            <span class="text nav-text">Register Police</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="venues.html">
-                            <i class='bx bx-map-pin icon' ></i>
-                            <span class="text nav-text">Venues</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="settings.html">
-                            <i class='bx bx-braille icon' ></i>
-                            <span class="text nav-text">settings
-                            </span>
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="login.html">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
-            </div>
+          <div class="text logo-text">
+            <span class="name">Safe & Sound</span>
+            <span class="profession">Police Build</span>
+          </div>
         </div>
 
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="venues.html">
+                <i class="bx bx-map-pin icon"></i>
+                <span class="text nav-text">Venues</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="reports.html">
+                <i class="bx bxs-report icon"></i>
+                <span class="text nav-text">Reports</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="crimes.html">
+                <i class="bx bx-knife icon"></i>
+                <span class="text nav-text">Crimes</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="management.html">
+                <i class="bx bx-lock-alt icon"></i>
+                <span class="text nav-text">Management</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="settings.html">
+                <i class="bx bx-cog icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="">
+            <span id="logout">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Logout</span>
+            </span>
+          </li>
+
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
     </nav>
 
     <section class="home">
-        
-        <main class="home">
-            <h1>Dashboard</h1>
-            <div class="insights">
-                <!-- start of sales-->
-                <div class="sales">
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Cases</h3>
-                            <h1>3456</h1>
-                        </div>
-                        <div class="right">
-                            <svg>
-                                <circle cx ='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="percent">
-                                <p>80%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">last 24 hours</small>
+      <main class="home">
+        <h1>Dashboard</h1>
+        <div class="insights">
+          <!-- start of sales-->
+          <div class="sales">
+            <div class="middle">
+              <div class="left">
+                <h3>Total Cases</h3>
+                <h1>3456</h1>
+              </div>
+              <div class="right">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percent">
+                  <p>80%</p>
                 </div>
-                 <!-- end of sales-->
-                 <div class="expenses">
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Cases Resolved</h3>
-                            <h1>378</h1>
-                        </div>
-                        <div class="right">
-                            <svg>
-                                <circle cx ='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="percent">
-                                <p>20%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">last 24 hours</small>
-                </div>
-                 <!-- end of expenses--> 
-                 <div class="income">
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Relative Increase in cases</h3>
-                            <h1></h1>
-                        </div>
-                        <div class="right">
-                            <svg>
-                                <circle cx ='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="percent">
-                                <p>50%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">last 24 hours</small>
-                </div>
-                 <!-- end of income-->
+              </div>
             </div>
-            <div class="live-reports">
-                <h2>Live reports</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>User Name</th>
-                            <th>NHS number</th>
-                            <th>Urgency level</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Henry</td>
-                            <td>123 456 7890</td>
-                            <td>Red</td>
-                            <td class="unresolved">Unsreloved</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Henry</td>
-                            <td>123 456 7890</td>
-                            <td>Red</td>
-                            <td class="unresolved">Unsreloved</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Henry</td>
-                            <td>123 456 7890</td>
-                            <td>Red</td>
-                            <td class="unresolved">Unsreloved</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Henry</td>
-                            <td>123 456 7890</td>
-                            <td>Red</td>
-                            <td class="unresolved">Unsreloved</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Henry</td>
-                            <td>123 456 7890</td>
-                            <td>Red</td>
-                            <td class="unresolved">Unsreloved</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#">View All</a>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+          <!-- end of sales-->
+          <div class="expenses">
+            <div class="middle">
+              <div class="left">
+                <h3>Cases Resolved</h3>
+                <h1>378</h1>
+              </div>
+              <div class="right">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percent">
+                  <p>20%</p>
+                </div>
+              </div>
             </div>
-        </main>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+          <!-- end of expenses-->
+          <div class="income">
+            <div class="middle">
+              <div class="left">
+                <h3>Relative Increase in cases</h3>
+                <h1></h1>
+              </div>
+              <div class="right">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="percent">
+                  <p>50%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">last 24 hours</small>
+          </div>
+          <!-- end of income-->
+        </div>
+        <div class="live-reports">
+          <h2>Live reports</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>NHS number</th>
+                <th>Urgency level</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Henry</td>
+                <td>123 456 7890</td>
+                <td>Red</td>
+                <td class="unresolved">Unsreloved</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>Henry</td>
+                <td>123 456 7890</td>
+                <td>Red</td>
+                <td class="unresolved">Unsreloved</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>Henry</td>
+                <td>123 456 7890</td>
+                <td>Red</td>
+                <td class="unresolved">Unsreloved</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>Henry</td>
+                <td>123 456 7890</td>
+                <td>Red</td>
+                <td class="unresolved">Unsreloved</td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td>Henry</td>
+                <td>123 456 7890</td>
+                <td>Red</td>
+                <td class="unresolved">Unsreloved</td>
+                <td class="primary">Details</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#">View All</a>
+        </div>
+      </main>
     </section>
-
-  
-
-    <script src="script.js"></script>
-
-</body>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
