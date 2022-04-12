@@ -42,7 +42,7 @@ function handleResponse(data) {
     let message = data["message"];
     if (response) {
         localStorage.setItem("jwt", message);
-        location.replace("/index.html");
+        location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
     } else {
         let responseDisplay = document.getElementById("response");
         responseDisplay.style.display = "block";
