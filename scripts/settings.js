@@ -23,6 +23,7 @@ function handleChangeRequest(password, newPassword, jwt) {
     if (valid) {
         changePassword(password, jwt)
     } else {
+        let responseDisplay = document.getElementById("response");
         responseDisplay.style.display = "block";
         responseDisplay.innerHTML = "Passwords do not match";
         document.getElementById("loading").style.display = "none";
