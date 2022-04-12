@@ -2,7 +2,7 @@
 //go to main page
 let jwt = localStorage.getItem("jwt");
 if (jwt !== null) {
-    location.replace("/index.html")
+    location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html")
 }
 
 //changes the visibility of the password on the input

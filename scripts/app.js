@@ -1,12 +1,12 @@
 let jwt = localStorage.getItem("jwt");
 console.log(jwt)
 if (jwt === null) {
-    window.location.replace("/login.html");
+    window.location.replace("https://joaogarrido98.github.io/Safe-and-sound/login.html");
 }
 
 function logout() {
     localStorage.removeItem("jwt");
-    window.location.replace("/login.html");
+    window.location.replace("https://joaogarrido98.github.io/Safe-and-sound/login.html");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
