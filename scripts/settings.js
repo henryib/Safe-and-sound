@@ -22,6 +22,11 @@ function handleChangeRequest(password, newPassword, jwt) {
     let valid = validateForm(password, newPassword);
     if (valid) {
         changePassword(password, jwt)
+    } else {
+        responseDisplay.style.display = "block";
+        responseDisplay.innerHTML = "Passwords do not match";
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("change_btn").style.display = "block";
     }
 };
 
