@@ -41,11 +41,10 @@ function handleResponse(data) {
     let responseDisplay = document.getElementById("response");
     let response = data["success"];
     let message = data["message"];
-    let police = data["optional"];
+    let police = data["generic"];
     if (response) {
         localStorage.setItem("jwt", message);
         localStorage.setItem("police", JSON.stringify(police))
-        console.log(police)
         location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
     } else {
         responseDisplay.style.display = "block";
