@@ -19,11 +19,12 @@ function validateForm(password, newPassword) {
 }
 
 function handleChangeRequest(password, newPassword, jwt) {
+    let responseDisplay = document.getElementById("response");
+    responseDisplay.style.display = "none";
     let valid = validateForm(password, newPassword);
     if (valid) {
         changePassword(password, jwt)
     } else {
-        let responseDisplay = document.getElementById("response");
         responseDisplay.style.display = "block";
         responseDisplay.innerHTML = "Passwords do not match";
         document.getElementById("loading").style.display = "none";
