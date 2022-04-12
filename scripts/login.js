@@ -47,6 +47,8 @@ function handleResponse(data) {
         let responseDisplay = document.getElementById("response");
         responseDisplay.style.display = "block";
         responseDisplay.innerHTML = message;
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("login_btn").style.display = "block";
     }
     setTimeout(() => {
         response.style.display = "none";
@@ -54,11 +56,11 @@ function handleResponse(data) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    passwordToggle();
-
     //submit event for the form
     document.getElementById("form").addEventListener("submit", (e) => {
         e.preventDefault();
+        document.getElementById("loading").style.display = "block";
+        document.getElementById("login_btn").style.display = "none";
         let badge = document.getElementById("badgenumber").value;
         let password = document.getElementById("password").value;
         login(badge, password);

@@ -106,15 +106,16 @@
         <div class="settings">
           <h1>Settings</h1>
 
-          <form class="password" action="" method="post">
+          <form id="change-pass" class="box">
             <span>Change Password:</span>
 
             <input
               type="password"
-              id="old-password"
-              name="old-password"
-              placeholder="Old Password"
-              title="Please enter your old password"
+              id="password"
+              name="password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+              placeholder="Password"
               required
             />
 
