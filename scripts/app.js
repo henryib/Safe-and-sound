@@ -6,8 +6,23 @@ if (jwt === null) {
 
 function logout() {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("police");
     window.location.replace("https://joaogarrido98.github.io/Safe-and-sound/login.html");
 }
+
+function getPolice() {
+    let object = localStorage.getItem("police");
+    let police = JSON.parse(object);
+    return police;
+}
+
+window.addEventListener("load", () => {
+    let managementDisplay = document.getElementById("management");
+    let police = getPolice();
+    if (!police["admin"]) {
+        managementDisplay.style.display = "none";
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector('body'),
@@ -32,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     });
+
     document.getElementById("logout").addEventListener("click", () => {
         logout();
     });
