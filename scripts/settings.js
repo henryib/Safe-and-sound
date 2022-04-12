@@ -63,10 +63,13 @@ function handleResponse(data) {
         borderColor = "#bf314a";
         backgroundColor = "#F7DFE3";
     }
-    responseDisplay.style.borderBlockColor = borderColor;
+    responseDisplay.style.borderColor = borderColor;
     responseDisplay.style.backgroundColor = bgColor;
     document.getElementById("loading").style.display = "none";
     document.getElementById("change_btn").style.display = "block";
+    setTimeout(() => {
+        responseDisplay.style.display = "none";
+    }, 3000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
