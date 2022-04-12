@@ -112,7 +112,6 @@
             <input
               type="password"
               id="password"
-              name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
               placeholder="Password"
@@ -122,7 +121,6 @@
             <input
               type="password"
               id="new-password"
-              name="new-password"
               placeholder="New Password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -131,8 +129,9 @@
 
             <input type="checkbox" id="checkbox" onclick="passwordToggle()" />
             <label for="checkbox">Show Password</label>
-
-            <input type="submit" name="" value="Submit" />
+            <div id="response"></div>
+            <div class="loading-wrapper"><div id="loading"></div></div>
+            <input type="submit" id="change_btn" value="Submit" />
           </form>
         </div>
       </main>
