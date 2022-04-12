@@ -1,0 +1,50 @@
+/* ------------------------------- main  -------------------------------*/
+
+main {
+  margin-top: 1.4rem;
+}
+
+/* ------------------------------- Settings  -------------------------------*/
+
+main .password {
+  text-align: center;
+}
+
+main span {
+  padding-right: 10rem;
+}
+
+main .password input[type="password"],
+main .password input[type="text"] {
+  border: none;
+  background: white;
+  padding: 14px 10px;
+  width: 200px;
+  display: inline-block;
+  margin: 10px auto;
+  text-align: left;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  outline: none;
+}
+
+main label {
+  font-size: 14px;
+}
+
+main .password input[type="submit"] {
+  border: none;
+  color: #eeb7d5;
+  border-radius: 24px;
+  margin: 20px auto;
+  padding: 14px 10px;
+  width: 100px;
+  background: white;
+  cursor: pointer;
+}
+
+main .password input[type="submit"]:hover {
+  color: #eeb7d5;
+  background: #7f88c0;
+}

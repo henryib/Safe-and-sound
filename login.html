@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--CSS-->
-        <link href="login.css" rel="stylesheet" type="text/css"/>
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
 
-        <title>Login - Safe & Sound</title>
-        
-    </head>
+    <title>Safe & Sound</title>
+  </head>
 
-    <body>
-        <form class="box" id="form" autocomplete="off">
+  <body>
+    <form class="box" id="form" autocomplete="off">
+      <h1>Login</h1>
 
-            <h1>Login</h1>
+      <input
+        type="text"
+        id="badgenumber"
+        name="badgenumber"
+        placeholder="Badge number"
+        minlength="6"
+        maxlength="6"
+        pattern="[0-9]+"
+        title="Please enter your 6 digit badge number"
+        required
+      />
 
-            <input type="text" id="badgenumber" name="badgenumber" placeholder="Badge number" minLength="6" maxlength="6" pattern="[0-9]+"
-                title="Please enter your 6 digit badge number" required>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        title="Please enter your password"
+        required
+      />
 
-            <input type="password" id="password" name="password" placeholder="Password"
-                title="Please enter your password" required>
+      <input type="checkbox" id="checkbox" onclick="passwordToggle()" />
+      <label for="checkbox">Show Password</label>
+      <div id="response">hello</div>
+      <div class="loading-wrapper"><div id="loading"></div></div>
+      <input type="submit" id="login_btn" value="Login" />
+    </form>
 
-            <input type="checkbox" id="checkbox" onclick="passwordToggle()">
-            <label for="checkbox">Show Password</label>
-
-            <input type="submit" value="Login">
-        </form>
-
-        <script src="login.js"></script>
-    </body>
+    <script src="scripts/login.js"></script>
+  </body>
 </html>
