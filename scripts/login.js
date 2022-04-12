@@ -51,7 +51,7 @@ function handleResponse(data) {
         document.getElementById("login_btn").style.display = "block";
     }
     setTimeout(() => {
-        response.style.display = "none";
+        responseDisplay.style.display = "none";
     }, 4000)
 }
 
