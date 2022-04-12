@@ -18,8 +18,8 @@ window.addEventListener("load", () => {
 
     let managementDisplay = document.getElementById("management");
     let police = getPolice();
-    if (!police["admin"]) {
-        managementDisplay.style.display = "none";
+    if (!police["police_admin"]) {
+        managementDisplay.style.visibility = "gone";
     }
 });
 
