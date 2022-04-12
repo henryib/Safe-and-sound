@@ -27,7 +27,7 @@ function handleChangeRequest(password, newPassword, jwt) {
 
 function changePassword(password, jwt) {
     console.log(jwt)
-    fetch('https://safe-sound-208.herokuapp.com/police/password/change', {
+    fetch('https://safe-sound-208.herokuapp.com/police/password', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
