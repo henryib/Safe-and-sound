@@ -1,8 +1,3 @@
-let jwt = localStorage.getItem("jwt");
-console.log(jwt)
-if (jwt === null) {
-    window.location.replace("https://joaogarrido98.github.io/Safe-and-sound/login.html");
-}
 
 function logout() {
     localStorage.removeItem("jwt");
@@ -17,6 +12,11 @@ function getPolice() {
 }
 
 window.addEventListener("load", () => {
+    let jwt = localStorage.getItem("jwt");
+    if (jwt === null) {
+        window.location.replace("https://joaogarrido98.github.io/Safe-and-sound/login.html");
+    }
+
     let managementDisplay = document.getElementById("management");
     let police = getPolice();
     if (!police["admin"]) {
