@@ -1,9 +1,3 @@
-/* ------------------------------- main  -------------------------------*/
-
-main {
-  margin-top: 1.4rem;
-}
-
 main .insights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

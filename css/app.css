@@ -304,6 +304,10 @@ body.dark .home .text {
   color: var(--text-color);
 }
 
+main {
+  margin-top: 1.4rem;
+}
+
 #response {
   display: none;
   width: 95%;
