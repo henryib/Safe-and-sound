@@ -1,4 +1,3 @@
-
 function logout() {
     localStorage.removeItem("jwt");
     localStorage.removeItem("police");

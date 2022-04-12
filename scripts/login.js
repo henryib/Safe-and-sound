@@ -45,6 +45,7 @@ function handleResponse(data) {
     if (response) {
         localStorage.setItem("jwt", message);
         localStorage.setItem("police", JSON.stringify(police))
+        console.log(police)
         location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
     } else {
         responseDisplay.style.display = "block";
