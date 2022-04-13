@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "block";
     });
 
-    document.getElementById("add_police").addEventListener("click", (e) => {
+    document.getElementById("add_police").addEventListener("submit", (e) => {
         e.preventDefault();
         addPolice();
     });
