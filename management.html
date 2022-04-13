@@ -102,11 +102,47 @@
         </div>
       </div>
     </nav>
-
     <section class="home">
       <main class="home">
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span class="close">&times;</span>
+             <form class="box">
+               <h1>Register</h1>
+              <input
+        type="text"
+        id="badgenumber"
+        name="badgenumber"
+        placeholder="Badge number"
+        minlength="6"
+        maxlength="6"
+        pattern="[0-9]+"
+        title="Please enter your 6 digit badge number"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        onchange="checkPassword()"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required
+      />
+      <input type="checkbox" id="admin"/>
+
+      <input type="checkbox" id="checkbox" onclick="passwordToggle()" />
+      <label for="checkbox">Show Password</label>
+
+      <input type="submit" name="" value="Submit" />
+    </form>
+            </div>
+          </div>
         <h1>Management</h1>
         <div class="general">
+          <button id="add"><i class='bx bxs-plus-circle'></i></button>
           <div class="loading_wrapper"><div id="loading"></div></div>
           <div id="response"></div>
           <table id="police_table">

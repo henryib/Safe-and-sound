@@ -79,6 +79,7 @@ function handleResponseActivation(data, button) {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loading").style.display = "block";
     let jwt = localStorage.getItem("jwt");
@@ -89,4 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     getAllPolice(jwt)
 
+    let modal = document.getElementById("myModal");
+    document.getElementsByClassName("close")[0].addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    document.getElementById("add").addEventListener("click", () => {
+        modal.style.display = "block";
+
+    });
 });
