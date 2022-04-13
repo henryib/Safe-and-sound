@@ -45,19 +45,23 @@ function handleResponse(data, jwt) {
 }
 
 function activationHandle(evt) {
-    fetch(`https://safe-sound-208.herokuapp.com/police/deactivate/${evt.target.id}`, {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${jwt}`
-        }
-    })
-        .then((response) => response.json())
-        .then((data) => handleResponseDeactivation(data, evt.target))
-        .catch(function (error) {
-            console.log(error);
-        });
+    if (evt.target.classList.contains("active")) {
+        fetch(`https://safe-sound-208.herokuapp.com/police/deactivate/${evt.target.id}`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jwt}`
+            }
+        })
+            .then((response) => response.json())
+            .then((data) => handleResponseDeactivation(data, evt.target))
+            .catch(function (error) {
+                console.log(error);
+            });
+    } else {
+        alert("Already Deactivated");
+    }
 }
 
 function handleResponseDeactivation(data, button) {
