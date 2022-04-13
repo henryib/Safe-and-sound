@@ -2,6 +2,11 @@
   display: none;
 }
 
+#police_table button {
+  font-weight: 600;
+  padding: 10px;
+}
+
 .isAdmin {
   background-color: var(--admin);
 }

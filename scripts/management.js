@@ -30,7 +30,7 @@ function handleResponse(data) {
             allRows += `<tr>
         <td class="police_badge">${police["police_badge"]}</td>
         <td class="police_admin"><button class="${button_class_admin}">${police_admin}</button></td>
-        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle()" class="${button_class_activation}">${police_active}</button></td>
+        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle(event)" class="${button_class_activation} activation">${police_active}</button></td>
         </tr>`;
         }
         table_body.innerHTML = allRows;
