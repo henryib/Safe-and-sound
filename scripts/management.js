@@ -21,12 +21,12 @@ function handleResponse(data) {
         let table_body = document.getElementById("police_list");
         let allRows = ""
         for (police in data["generic"]) {
-            let police_active = police.police_active ? "Active" : "Deactivated";
-            let police_admin = police.police_admin ? "Admin" : "Regular";
-            let button_class_activation = police.police_active ? "active" : "deactivated";
-            let button_class_admin = police.police_admin ? "admin" : "regular";
+            let police_active = police["police_active"] ? "Active" : "Deactivated";
+            let police_admin = police["police_admin"] ? "Admin" : "Regular";
+            let button_class_activation = police["police_active"] ? "active" : "deactivated";
+            let button_class_admin = police["police_admin"] ? "admin" : "regular";
             allRows += `<tr>
-        <td class="police_badge">${police.police_badge}</td>
+        <td class="police_badge">${police["police_badge"]}</td>
         <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
         <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
         </tr>`;
