@@ -16,9 +16,11 @@ function getAllPolice(jwt) {
 
 function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
-    document.getElementById("police_table").style.display = "none";
-
-    console.log(data);
+    document.getElementById("police_table").style.display = "block";
+    let table_body = document.getElementById("police_list");
+    data.forEach(police => {
+        console.log(police)
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
