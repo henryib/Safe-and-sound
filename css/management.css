@@ -2,7 +2,8 @@
   display: none;
   table-layout: fixed;
   overflow-y: scroll;
-  max-height: 60vh;
+  max-height: 70vh;
+  width: 100%;
 }
 
 #police_table button {
@@ -11,9 +12,6 @@
   margin-top: 10px;
 }
 
-#police_table td {
-  width: 33.3%;
-}
 thead {
   width: 100%;
 }
