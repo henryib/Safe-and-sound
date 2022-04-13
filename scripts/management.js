@@ -83,7 +83,7 @@ function addPolice() {
     let jwt = localStorage.getItem("jwt");
     let badge = document.getElementById("badgenumber").value;
     let password = document.getElementById("password").value;
-    let admin = document.getElementById("badgenumber").checked;
+    let admin = document.getElementById("admin").checked;
     fetch(`https://safe-sound-208.herokuapp.com/police/register`, {
         method: 'POST',
         headers: {
