@@ -8,7 +8,7 @@
 :root {
   /* ===== Colors ===== */
   --body-color: #e5e9f1;
-  --sidebar-color: #f2f0f0;
+  --sidebar-color: #f8f6f6;
   --primary-color: #eeb7d5;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
@@ -318,6 +318,7 @@ main .general {
 
 main .general table {
   width: 100%;
+  table-layout: fixed;
 }
 
 main table tbody td {
