@@ -48,13 +48,16 @@ function activationHandle(evt) {
     let jwt = localStorage.getItem("jwt");
     if (evt.target.classList.contains("active")) {
         let badge = evt.target.id;
-        fetch(`https://safe-sound-208.herokuapp.com/police/deactivate/${badge}`, {
+        fetch(`https://safe-sound-208.herokuapp.com/police/deactivate`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${jwt}`
-            }
+            },
+            body: JSON.stringify({
+                police_badge: badge
+            })
         })
             .then((response) => response.json())
             .then((data) => handleResponseDeactivation(data, evt.target))
