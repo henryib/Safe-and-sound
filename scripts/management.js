@@ -19,7 +19,16 @@ function handleResponse(data) {
     document.getElementById("police_table").style.display = "block";
     let table_body = document.getElementById("police_list");
     for (police in data) {
-        console.log(police)
+        let police_active = police.police_active ? "Active" : "Deactivated";
+        let police_admin = police.police_admin ? "Admin" : "Regular";
+        let button_class_activation = police.police_active ? "active" : "deactivated";
+        let button_class_admin = police.police_admin ? "admin" : "regular";
+        let row = `<tr>
+        <td class="police_badge">${police.badge}</td>
+        <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
+        <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
+        </tr>`;
+        table_body.appendChild(row)
     }
 }
 
