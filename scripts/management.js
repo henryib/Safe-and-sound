@@ -91,12 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
     getAllPolice(jwt)
 
     let modal = document.getElementById("myModal");
-    document.getElementsByClassName("close")[0].addEventListener("click", () => {
+    document.getElementById("close").addEventListener("click", () => {
         modal.style.display = "none";
     });
 
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
-
     });
 });

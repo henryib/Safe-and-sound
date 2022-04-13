@@ -32,11 +32,21 @@ form {
   display: flex;
   flex-direction: column;
 }
+form input {
+  margin-top: 20px;
+}
+
+.check {
+  display: flex;
+  flex-direction: row;
+}
 
 form input[type="submit"] {
-  padding: 20;
+  padding: 10px;
+  border-radius: 8px;
   border: none;
   background-color: var(--admin);
+  cursor: pointer;
 }
 
 #add {
