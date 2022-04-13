@@ -1,6 +1,8 @@
 #police_table {
   display: none;
   table-layout: fixed;
+  overflow-y: scroll;
+  max-height: 60vh;
 }
 
 #police_table button {

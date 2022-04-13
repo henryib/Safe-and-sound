@@ -108,6 +108,8 @@ function handleRegistration(data) {
     let success = data["success"];
     let message = data["message"];
     if (success) {
+        let modal = document.getElementById("myModal");
+        modal.style.display = "none";
         alert(message);
         setTimeout(() => {
             location.reload();
