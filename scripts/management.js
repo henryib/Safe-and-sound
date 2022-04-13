@@ -16,7 +16,7 @@ function getAllPolice(jwt) {
 
 function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
-    if (!data["success"]) {
+    if (data["success"]) {
         document.getElementById("police_table").style.display = "block";
         let table_body = document.getElementById("police_list");
         let allRows = null
@@ -35,7 +35,7 @@ function handleResponse(data) {
     } else {
         let response = document.getElementById("response");
         response.style.display = "block";
-        response.innerHTML = data["message"] + "<br>" + "Page will reload in 10 seconds";
+        response.innerHTML = data["message"] + "<br><br>" + "Page will reload in 10 seconds";
         setTimeout(() => {
             location.reload();
         }, 10000)
