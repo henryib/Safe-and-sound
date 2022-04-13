@@ -8,7 +8,7 @@
 :root {
   /* ===== Colors ===== */
   --body-color: #e5e9f1;
-  --sidebar-color: #fff;
+  --sidebar-color: #f2f0f0;
   --primary-color: #eeb7d5;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
@@ -310,27 +310,19 @@ main {
 
 main .general {
   margin-top: 2rem;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background: var(--sidebar-color);
 }
 
 main .general table {
-  background: var(--sidebar-color);
   width: 100%;
-  border-radius: 2rem;
-  padding: 1.8rem;
-  text-align: center;
-  box-shadow: 0 2rem 3rem var(--primary-color-light);
-  transition: all 300ms ease;
-}
-
-main .general table:hover {
-  box-shadow: none;
 }
 
 main table tbody td {
-  height: 2.8rem;
   border-bottom: 1px solid var(--body-color);
-  padding: 1.2rem;
-  width: 16%;
+  padding: 20px 10px;
 }
 
 main table tbody tr:last-child td {
@@ -342,10 +334,8 @@ main table tbody tr:hover {
 }
 
 main table tbody button {
-  color: var(--sidebar-color);
-  background: red;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: 8px;
+  border-radius: 8px;
   border: none;
 }
 
