@@ -70,8 +70,11 @@ function activationHandle(evt) {
 }
 
 function handleResponseDeactivation(data, button) {
-    console.log(data)
-    console.log(button)
+    if (data["success"]) {
+        location.reload();
+    } else {
+        alert(data["message"]);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
