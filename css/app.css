@@ -308,6 +308,47 @@ main {
   margin-top: 1.4rem;
 }
 
+main .general {
+  margin-top: 2rem;
+}
+
+main .general table {
+  background: var(--sidebar-color);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 2rem 3rem var(--primary-color-light);
+  transition: all 300ms ease;
+}
+
+main .general table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--body-color);
+  padding: 1.2rem;
+  width: 16%;
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+main table tbody tr:hover {
+  background: var(--primary-color-light);
+}
+
+main table tbody button {
+  color: var(--sidebar-color);
+  background: red;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
 #response {
   text-align: center;
   display: none;

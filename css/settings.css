@@ -1,4 +1,4 @@
-main .password {
+.password {
   text-align: center;
 }
 
@@ -6,8 +6,8 @@ main span {
   padding-right: 10rem;
 }
 
-main .password input[type="password"],
-main .password input[type="text"] {
+.password input[type="password"],
+.password input[type="text"] {
   border: none;
   background: white;
   padding: 14px 10px;
@@ -21,11 +21,11 @@ main .password input[type="text"] {
   outline: none;
 }
 
-main label {
+label {
   font-size: 14px;
 }
 
-main .password input[type="submit"] {
+.password input[type="submit"] {
   border: none;
   color: #eeb7d5;
   border-radius: 24px;
@@ -36,7 +36,7 @@ main .password input[type="submit"] {
   cursor: pointer;
 }
 
-main .password input[type="submit"]:hover {
+.password input[type="submit"]:hover {
   color: #eeb7d5;
   background: #7f88c0;
 }
