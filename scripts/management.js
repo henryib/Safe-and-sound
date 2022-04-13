@@ -21,6 +21,7 @@ function handleResponse(data) {
         let table_body = document.getElementById("police_list");
         let allRows = ""
         for (police in data["generic"]) {
+            console.log(police)
             let police_active = police["police_active"] ? "Active" : "Deactivated";
             let police_admin = police["police_admin"] ? "Admin" : "Regular";
             let button_class_activation = police["police_active"] ? "active" : "deactivated";
@@ -46,5 +47,10 @@ function handleResponse(data) {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loading").style.display = "block";
     let jwt = localStorage.getItem("jwt");
-    let police = getAllPolice(jwt)
+    let currentUser = localStorage.getItem("police");
+    if (!currentUser["police_admin"]) {
+        location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
+    }
+
+    getAllPolice(jwt)
 });
