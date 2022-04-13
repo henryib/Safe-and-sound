@@ -20,6 +20,7 @@ function handleResponse(data) {
         document.getElementById("police_table").style.display = "block";
         let table_body = document.getElementById("police_list");
         let allRows = null
+        console.log(data["generic"])
         for (police in data["generic"]) {
             let police_active = police.police_active ? "Active" : "Deactivated";
             let police_admin = police.police_admin ? "Admin" : "Regular";
@@ -31,6 +32,7 @@ function handleResponse(data) {
         <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
         </tr>`;
         }
+        console.log(allRows);
         table_body.innerHTML(allRows)
     } else {
         let response = document.getElementById("response");
