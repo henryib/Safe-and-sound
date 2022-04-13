@@ -1,5 +1,6 @@
 #police_table {
   display: none;
+  table-layout: fixed;
 }
 
 #police_table button {
