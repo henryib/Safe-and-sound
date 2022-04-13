@@ -16,6 +16,8 @@ function getAllPolice(jwt) {
 
 function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
+    document.getElementById("police_table").style.display = "none";
+
     console.log(data);
 }
 
