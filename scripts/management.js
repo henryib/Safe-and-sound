@@ -8,13 +8,13 @@ function getAllPolice(jwt) {
         }
     })
         .then((response) => response.json())
-        .then((data) => handleResponse(data))
+        .then((data) => handleResponse(data, jwt))
         .catch(function (error) {
             console.log(error);
         });
 }
 
-function handleResponse(data) {
+function handleResponse(data, jwt) {
     document.getElementById("loading").style.display = "none";
     if (data["success"]) {
         document.getElementById("police_table").style.display = "block";
@@ -30,7 +30,7 @@ function handleResponse(data) {
             allRows += `<tr>
         <td class="police_badge">${police["police_badge"]}</td>
         <td class="police_admin"><button class="${button_class_admin}">${police_admin}</button></td>
-        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle(event)" class="${button_class_activation} activation">${police_active}</button></td>
+        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle(event, ${jwt})" class="${button_class_activation} activation">${police_active}</button></td>
         </tr>`;
         }
         table_body.innerHTML = allRows;
@@ -45,7 +45,24 @@ function handleResponse(data) {
 }
 
 function activationHandle(evt) {
-    console.log(evt.target.id)
+    fetch(`https://safe-sound-208.herokuapp.com/police/deactivate/${evt.target.id}`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`
+        }
+    })
+        .then((response) => response.json())
+        .then((data) => handleResponseDeactivation(data, evt.target))
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function handleResponseDeactivation(data, button) {
+    console.log(data)
+    console.log(button)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
