@@ -19,9 +19,10 @@ function handleResponse(data) {
     if (data["success"]) {
         document.getElementById("police_table").style.display = "block";
         let table_body = document.getElementById("police_list");
-        let allRows = ""
-        for (police in data["generic"]) {
-            console.log(police)
+        let allRows = "";
+        let objects = data["generic"];
+        for (let i = 0; i < objects.length; i++) {
+            let police = objects[i];
             let police_active = police["police_active"] ? "Active" : "Deactivated";
             let police_admin = police["police_admin"] ? "Admin" : "Regular";
             let button_class_activation = police["police_active"] ? "active" : "deactivated";
