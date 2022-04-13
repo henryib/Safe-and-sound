@@ -9,6 +9,10 @@
   margin-top: 10px;
 }
 
+#police_table td {
+  width: 33.3%;
+}
+
 .isAdmin {
   background-color: var(--admin);
 }
