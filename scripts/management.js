@@ -28,7 +28,7 @@ function handleResponse(data) {
         <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
         <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
         </tr>`;
-        table_body.appendChild(row)
+        table_body.append(row)
     }
 }
 
