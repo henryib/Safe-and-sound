@@ -47,7 +47,7 @@ function handleResponse(data) {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loading").style.display = "block";
     let jwt = localStorage.getItem("jwt");
-    let currentUser = localStorage.getItem("police");
+    let currentUser = JSON.parse(localStorage.getItem("police"));
     if (!currentUser["police_admin"]) {
         location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
     }
