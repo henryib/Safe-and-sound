@@ -322,6 +322,7 @@ main .general table {
 }
 
 main table tbody td {
+  width: 100%;
   border-bottom: 1px solid var(--body-color);
   padding: 20px 10px;
 }
@@ -338,6 +339,11 @@ main table tbody button {
   padding: 8px;
   border-radius: 8px;
   border: none;
+}
+
+main table thead {
+  font-weight: 600;
+  text-align: center;
 }
 
 #response {
