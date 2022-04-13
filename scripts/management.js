@@ -14,7 +14,7 @@ function getAllPolice(jwt) {
         });
 }
 
-function handleResponse(data, jwt) {
+function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
     if (data["success"]) {
         document.getElementById("police_table").style.display = "block";
@@ -30,7 +30,7 @@ function handleResponse(data, jwt) {
             allRows += `<tr>
         <td class="police_badge">${police["police_badge"]}</td>
         <td class="police_admin"><button class="${button_class_admin}">${police_admin}</button></td>
-        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle(event, ${jwt})" class="${button_class_activation} activation">${police_active}</button></td>
+        <td class="police_active"><button id="${police["police_badge"]}" onClick="activationHandle(event)" class="${button_class_activation} activation">${police_active}</button></td>
         </tr>`;
         }
         table_body.innerHTML = allRows;
@@ -45,6 +45,7 @@ function handleResponse(data, jwt) {
 }
 
 function activationHandle(evt) {
+    let jwt = localStorage.getItem("jwt");
     if (evt.target.classList.contains("active")) {
         fetch(`https://safe-sound-208.herokuapp.com/police/deactivate/${evt.target.id}`, {
             method: 'POST',
