@@ -46,30 +46,32 @@ function handleResponse(data) {
 
 function activationHandle(evt) {
     let jwt = localStorage.getItem("jwt");
+    let badge = evt.target.id;
+    let type = null;
     if (evt.target.classList.contains("active")) {
-        let badge = evt.target.id;
-        fetch(`https://safe-sound-208.herokuapp.com/police/deactivate`, {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${jwt}`
-            },
-            body: JSON.stringify({
-                police_badge: badge
-            })
-        })
-            .then((response) => response.json())
-            .then((data) => handleResponseDeactivation(data, evt.target))
-            .catch(function (error) {
-                console.log(error);
-            });
+        type = "deactivate";
     } else {
-        alert("Already Deactivated");
+        type = "activate";
     }
+    fetch(`https://safe-sound-208.herokuapp.com/police/${type}`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`
+        },
+        body: JSON.stringify({
+            police_badge: badge
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => handleResponseActivation(data, evt.target))
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
-function handleResponseDeactivation(data, button) {
+function handleResponseActivation(data, button) {
     if (data["success"]) {
         location.reload();
     } else {
