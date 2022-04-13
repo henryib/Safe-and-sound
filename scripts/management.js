@@ -16,20 +16,31 @@ function getAllPolice(jwt) {
 
 function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
-    document.getElementById("police_table").style.display = "block";
-    let table_body = document.getElementById("police_list");
-    for (police in data) {
-        let police_active = police.police_active ? "Active" : "Deactivated";
-        let police_admin = police.police_admin ? "Admin" : "Regular";
-        let button_class_activation = police.police_active ? "active" : "deactivated";
-        let button_class_admin = police.police_admin ? "admin" : "regular";
-        let row = `<tr>
+    if (!data["success"]) {
+        document.getElementById("police_table").style.display = "block";
+        let table_body = document.getElementById("police_list");
+        let allRows = null
+        for (police in data["generic"]) {
+            let police_active = police.police_active ? "Active" : "Deactivated";
+            let police_admin = police.police_admin ? "Admin" : "Regular";
+            let button_class_activation = police.police_active ? "active" : "deactivated";
+            let button_class_admin = police.police_admin ? "admin" : "regular";
+            allRows += `<tr>
         <td class="police_badge">${police.badge}</td>
         <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
         <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
         </tr>`;
-        table_body.append(row)
+        }
+        table_body.innerHTML(allRows)
+    } else {
+        let response = document.getElementById("response");
+        response.style.display = "block";
+        response.innerHTML = data["message"] + "<br>" + "Page will reload in 10 seconds";
+        setTimeout(() => {
+            location.reload();
+        }, 10000)
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
