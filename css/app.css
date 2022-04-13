@@ -13,6 +13,12 @@
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #7f88c0;
+  --error-red: #bf314a;
+  --error-light-red: #f7dfe3;
+  --success-green: #1cac78;
+  --success-light-green: #d0f8e9;
+  --admin: #7f88c0;
+  --no-admin: #eeb7d5;
 
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;
@@ -351,10 +357,10 @@ main table thead {
   display: none;
   width: 95%;
   margin-top: 20px;
-  border: 2px solid #bf314a;
+  border: 2px solid var(--error-red);
   border-radius: 8px;
   padding: 10px;
-  background-color: #f7dfe3;
+  background-color: var(--error-light-red);
 }
 .loading-wrapper {
   margin-top: 20px;

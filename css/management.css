@@ -1,3 +1,19 @@
 #police_table {
   display: none;
 }
+
+.isAdmin {
+  background-color: var(--admin);
+}
+
+.isRegular {
+  background-color: var(--no-admin);
+}
+
+.active {
+  background-color: var(--success-green);
+}
+
+.deactivated {
+  background-color: var(--error-red);
+}

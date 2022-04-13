@@ -26,7 +26,7 @@ function handleResponse(data) {
             let police_active = police["police_active"] ? "Active" : "Deactivated";
             let police_admin = police["police_admin"] ? "Admin" : "Regular";
             let button_class_activation = police["police_active"] ? "active" : "deactivated";
-            let button_class_admin = police["police_admin"] ? "admin" : "regular";
+            let button_class_admin = police["police_admin"] ? "isAdmin" : "isRegular";
             allRows += `<tr>
         <td class="police_badge">${police["police_badge"]}</td>
         <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
