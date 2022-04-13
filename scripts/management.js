@@ -29,8 +29,8 @@ function handleResponse(data) {
             let button_class_admin = police["police_admin"] ? "isAdmin" : "isRegular";
             allRows += `<tr>
         <td class="police_badge">${police["police_badge"]}</td>
-        <td class="police_admin"><button class="admin ${button_class_admin}">${police_admin}</button></td>
-        <td class="police_active"><button class="activation ${button_class_activation}">${police_active}</button></td>
+        <td class="police_admin"><button class="${button_class_admin}">${police_admin}</button></td>
+        <td class="police_active"><button onClick="activationHandle()" class="${button_class_activation}">${police_active}</button></td>
         </tr>`;
         }
         table_body.innerHTML = allRows;
@@ -42,7 +42,10 @@ function handleResponse(data) {
             location.reload();
         }, 10000)
     }
+}
 
+function activationHandle(evt) {
+    console.log(evt.target.id)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,4 +57,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     getAllPolice(jwt)
+
 });

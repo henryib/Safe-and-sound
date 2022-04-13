@@ -345,6 +345,7 @@ main table tbody button {
   padding: 8px;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 main table thead {
