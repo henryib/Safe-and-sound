@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
     let managementDisplay = document.getElementById("management");
     let police = getPolice();
     if (!police["police_admin"]) {
-        managementDisplay.style.visibility = "gone";
+        managementDisplay.style.display = "none";
     }
 });
 

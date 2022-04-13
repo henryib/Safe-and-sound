@@ -65,6 +65,8 @@ form input[type="submit"] {
 }
 
 #add {
+  border-radius: 8px;
+  font-size: 1.2rem;
   float: right;
   background-color: var(--success-green);
   padding: 10px;
