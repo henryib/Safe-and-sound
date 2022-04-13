@@ -12,6 +12,12 @@
 #police_table td {
   width: 33.3%;
 }
+thead {
+  width: 100%;
+}
+tbody {
+  width: 100%;
+}
 
 .isAdmin {
   background-color: var(--admin);
