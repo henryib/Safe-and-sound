@@ -18,9 +18,9 @@ function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
     document.getElementById("police_table").style.display = "block";
     let table_body = document.getElementById("police_list");
-    data.forEach(police => {
+    for (police in data) {
         console.log(police)
-    });
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
