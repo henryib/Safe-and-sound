@@ -309,6 +309,7 @@ main {
 }
 
 #response {
+  text-align: center;
   display: none;
   width: 95%;
   margin-top: 20px;
