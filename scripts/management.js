@@ -79,6 +79,43 @@ function handleResponseActivation(data, button) {
     }
 }
 
+function addPolice() {
+    let jwt = localStorage.getItem("jwt");
+    let badge = document.getElementById("badgenumber").value;
+    let password = document.getElementById("password").value;
+    let admin = document.getElementById("badgenumber").checked;
+    fetch(`https://safe-sound-208.herokuapp.com/police/register`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`
+        },
+        body: JSON.stringify({
+            police_badge: badge,
+            police_password: password,
+            police_admin: admin
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => handleRegistration(data))
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function handleRegistration(data) {
+    let success = data["success"];
+    let message = data["message"];
+    if (success) {
+        alert(message);
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+    } else {
+        alert(message);
+    }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loading").style.display = "block";
@@ -97,5 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
+    });
+
+    document.getElementById("add_police").addEventListener("click", (e) => {
+        e.preventDefault();
+        addPolice();
     });
 });
