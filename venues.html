@@ -105,138 +105,68 @@
 
     <section class="home">
       <main class="home">
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span id="close">&times;</span>
+             <form id="add_venue" class="box" autocomplete="off"> 
+               <h1>Add Venue</h1>
+              <input
+        type="text"
+        id="venue_name"
+        placeholder="Venue Name"
+        minlength="4"
+        maxlength="30"
+        pattern="[a-zA-Z]+"
+        title="Please enter a name"
+        required
+      />
+     <input
+        type="text"
+        id="venue_city"
+        placeholder="Venue City"
+        minlength="4"
+        maxlength="30"
+        pattern="[a-zA-Z]+"
+        title="Please enter a city"
+        required
+      />
+        <input
+        type="number"
+        id="venue_lat"
+        placeholder="Venue Latitude"
+        minlength="4"
+        maxlength="10"
+        pattern="^[+-]?(([1-8]?[0-9])(\.[0-9]{1,6})?|90(\.0{1,6})?)$"
+        title="Please enter a correct latitude"
+        required
+      />
+        <input
+        type="number"
+        id="venue_long"
+        placeholder="Venue Longitude"
+        minlength="4"
+        maxlength="10"
+        pattern="^[+-]?((([1-9]?[0-9]|1[0-7][0-9])(\.[0-9]{1,6})?)|180(\.0{1,6})?)$"
+        title="Please enter a correct Longitude"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
+            </div>
+          </div>
         <h1>Venues</h1>
         <div class="general">
-          <table>
+           <button id="add"><i class='bx bxs-plus-circle'></i></button>
+          <div class="loading_wrapper"><div id="loading"></div></div>
+          <div id="response"></div>
+          <table id="venues_table">
             <thead>
-              <tr>
-                <th>Name</th>
-                <th>Venue ID</th>
-                <th>Location</th>
-                <th>Reports</th>
-                <th>Distance</th>
-                <th>Last Report</th>
-                <th></th>
-              </tr>
+              <th>Badge</th>
+              <th>Admin</td>
+              <th>Active</th>
             </thead>
-            <tbody>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-              <tr>
-                <td>MOJO</td>
-                <td><a href="">123456789</a></td>
-                <td>53.40262, -2.9768</td>
-                <td>52</td>
-                <td>1.16 km</td>
-                <td>2 mins</td>
-                <td>
-                  <button>Deactivate</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="venues_list"></tbody>
           </table>
-          <div class="pagination">
-            <a class="active" href="#" title="Page 1">1</a>
-            <a href="#" title="Page 2">2</a>
-            <a href="#" title="Page 3">3</a>
-          </div>
         </div>
       </main>
     </section>

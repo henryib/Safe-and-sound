@@ -1,0 +1,28 @@
+form {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  margin-top: 10px;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+.check {
+  display: flex;
+  flex-direction: row;
+}
+
+form input[type="submit"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--admin);
+  cursor: pointer;
+}
