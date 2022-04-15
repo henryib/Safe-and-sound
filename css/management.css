@@ -4,8 +4,8 @@
   overflow-y: scroll;
   max-height: 70vh;
   width: 100%;
-  top: 20px;
   position: relative;
+  top: 20px;
   border-collapse: collapse;
 }
 
@@ -17,22 +17,22 @@
 
 thead {
   margin-top: 20px;
-  position: sticky;
   background-color: var(--admin);
-  top: 0;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 th {
   padding: 5px;
 }
 
-tbody {
-  width: 100%;
-}
-
 td {
   width: 33%;
+}
+
+tbody {
+  width: 100%;
 }
 
 .isAdmin {

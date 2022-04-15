@@ -328,6 +328,7 @@ main .general table {
 }
 
 main table tbody td {
+  width: 33%;
   border-bottom: 1px solid var(--body-color);
   padding: 10px 10px;
 }
@@ -342,7 +343,7 @@ main table tbody tr:hover {
 
 main table tbody button {
   padding: 8px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
 }
 

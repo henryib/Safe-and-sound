@@ -4,8 +4,8 @@
   overflow-y: scroll;
   max-height: 70vh;
   width: 100%;
-  top: 20px;
   position: relative;
+  top: 20px;
   border-collapse: collapse;
 }
 
@@ -25,6 +25,10 @@ thead {
 
 th {
   padding: 5px;
+}
+
+td {
+  width: 33%;
 }
 
 tbody {
