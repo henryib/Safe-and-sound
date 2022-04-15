@@ -16,6 +16,7 @@
 }
 
 thead {
+  margin-top: 20px;
   position: sticky;
   background-color: var(--admin);
   top: 0;
