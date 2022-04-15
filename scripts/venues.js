@@ -128,19 +128,11 @@ function handleAdd(data) {
     }
 }
 
-
-// Event listener located in management.js
-// Not sure if still need.
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('loading').style.display = 'block';
     let jwt = localStorage.getItem('jwt');
 
-    // Call the method to begin:
     getAllVenues(jwt);
-
-
-    // Modal that appears in management.js 
-    // Not sure if still need
 
     let modal = document.getElementById('myModal');
     document.getElementById('close').addEventListener('click', () => {

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/crimes.css" />
+
+    <!----===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Safe & Sound</title>
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="logo.png" alt="" />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">Safe & Sound</span>
+            <span class="profession">Police Build</span>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="venues.html">
+                <i class="bx bx-map-pin icon"></i>
+                <span class="text nav-text">Venues</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="reports.html">
+                <i class="bx bxs-report icon"></i>
+                <span class="text nav-text">Reports</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="crimes.html">
+                <i class="bx bx-knife icon"></i>
+                <span class="text nav-text">Crimes</span>
+              </a>
+            </li>
+
+            <li class="nav-link" id="management">
+              <a href="management.html">
+                <i class="bx bx-lock-alt icon"></i>
+                <span class="text nav-text">Management</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="settings.html">
+                <i class="bx bx-cog icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="">
+            <a id="logout">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <section class="home">
+      <main class="home">
+        <div id="myModal" class="modal">
+           <div class="modal-content">
+             <span id="close">&times;</span>
+             <form id="add_crimes" class="box" autocomplete="off"> 
+               <h1>Add Crimes</h1>
+              <input
+        type="text"
+        id="badgenumber"
+        placeholder="Badge number"
+        minlength="6"
+        maxlength="6"
+        pattern="[0-9]+"
+        title="Please enter your 6 digit badge number"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
+            </div>
+          </div>
+        <h1>Crimes</h1>
+        <div class="general">
+          <button id="add"><i class='bx bxs-plus-circle'></i></button>
+          <div class="loading_wrapper"><div id="loading"></div></div>
+          <div id="response"></div>
+          <table id="crimes_table">
+            <thead>
+              <th>Name</th>
+              <th>Description</td>
+              <th>Active</th>
+            </thead>
+            <tbody id="crimes_list"></tbody>
+          </table>
+        </div>
+      </main>
+    </section>
+
+    <script src="scripts/crimes.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
