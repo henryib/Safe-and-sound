@@ -11,12 +11,11 @@
   font-weight: 600;
   padding: 10px;
   margin-top: 10px;
-  position: sticky;
-  top: 0;
 }
 
 thead {
   position: sticky;
+  background-color: var(--admin);
   top: 0;
   width: 100%;
 }

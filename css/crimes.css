@@ -14,7 +14,10 @@
 }
 
 thead {
+  background-color: var(--admin);
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 tbody {
   width: 100%;
