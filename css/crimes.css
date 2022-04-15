@@ -5,6 +5,8 @@
   max-height: 70vh;
   width: 100%;
   position: relative;
+  margin-top: 20px;
+  border-collapse: collapse;
 }
 
 #crimes_table button {
@@ -18,7 +20,9 @@ thead {
   width: 100%;
   position: sticky;
   top: 0;
+  padding: 10px;
 }
+
 tbody {
   width: 100%;
 }
