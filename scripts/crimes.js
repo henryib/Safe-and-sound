@@ -1,5 +1,5 @@
-// Fetch all the venues
-function getAllVenues(jwt) {
+// Fetch all the crimes
+function getAllCrimes(jwt) {
     fetch('https://safe-sound-208.herokuapp.com/police/crimes', {
         method: 'GET',
         headers: {
@@ -15,7 +15,7 @@ function getAllVenues(jwt) {
         });
 }
 
-// Handle post request after fetching all the venues.
+// Handle post request after fetching all the crimes.
 // Fill the table with the data fetched.
 function handleResponse(data) {
     document.getElementById('loading').style.display = 'none';
@@ -48,7 +48,7 @@ function handleResponse(data) {
     }
 }
 
-// Activating/Validating a venue?
+// Activating/Validating a crime
 function activationHandle(evt) {
     document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem('jwt');
@@ -74,7 +74,7 @@ function activationHandle(evt) {
         });
 }
 
-// Handling response from activating/deactivation of venue
+// Handling response from activating/deactivation of crime
 function handleResponseActivation(data) {
     if (data['success']) {
         location.reload();
@@ -83,8 +83,8 @@ function handleResponseActivation(data) {
     }
 }
 
-// Adding a new venue
-function addVenue() {
+// Adding a new crime
+function addCrime() {
     let jwt = localStorage.getItem('jwt');
     let crime_name = document.getElementById("crime_name").value;
     let crime_description = document.getElementById("crime_description").value;
@@ -110,7 +110,7 @@ function addVenue() {
         });
 }
 
-// Handle the response from adding a venue:
+// Handle the response from adding a crime:
 function handleAdd(data) {
     let success = data['success'];
     let message = data['message'];
