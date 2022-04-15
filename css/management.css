@@ -4,15 +4,20 @@
   overflow-y: scroll;
   max-height: 70vh;
   width: 100%;
+  position: relative;
 }
 
 #police_table button {
   font-weight: 600;
   padding: 10px;
   margin-top: 10px;
+  position: sticky;
+  top: 0;
 }
 
 thead {
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 tbody {

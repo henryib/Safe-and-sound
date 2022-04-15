@@ -4,6 +4,7 @@
   overflow-y: scroll;
   max-height: 70vh;
   width: 100%;
+  position: relative;
 }
 
 #venues_table button {
