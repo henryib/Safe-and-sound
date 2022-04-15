@@ -58,16 +58,13 @@ function activationHandle(evt) {
     } else {
         type = 'activate';
     }
-    fetch(`https://safe-sound-208.herokuapp.com/venues/${type}`, {
+    fetch(`https://safe-sound-208.herokuapp.com/venues/${type}/${venue}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
             Authorization: `Bearer ${jwt}`
-        },
-        body: JSON.stringify({
-            venue_id: venue
-        })
+        }
     })
         .then((response) => response.json())
         .then((data) => handleResponseActivation(data, evt.target))
