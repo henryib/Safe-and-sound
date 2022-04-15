@@ -50,6 +50,7 @@ function handleResponse(data) {
 
 // Activating/Validating a venue?
 function activationHandle(evt) {
+    document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem('jwt');
     let venue = evt.target.id;
     let type = null;

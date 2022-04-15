@@ -45,6 +45,7 @@ function handleResponse(data) {
 }
 
 function activationHandle(evt) {
+    document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem("jwt");
     let badge = evt.target.id;
     let type = null;
