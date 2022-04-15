@@ -20,7 +20,10 @@ thead {
   background-color: var(--admin);
   top: 0;
   width: 100%;
-  padding: 10px;
+}
+
+th {
+  padding: 5px;
 }
 
 tbody {

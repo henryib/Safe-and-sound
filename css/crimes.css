@@ -20,7 +20,14 @@ thead {
   width: 100%;
   position: sticky;
   top: 0;
-  padding: 10px;
+}
+
+th {
+  padding: 5px;
+}
+
+td {
+  width: 33%;
 }
 
 tbody {
