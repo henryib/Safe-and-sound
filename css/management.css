@@ -4,7 +4,7 @@
   overflow-y: scroll;
   max-height: 70vh;
   width: 100%;
-  margin-top: 20px;
+  top: 20px;
   position: relative;
   border-collapse: collapse;
 }
@@ -29,6 +29,10 @@ th {
 
 tbody {
   width: 100%;
+}
+
+td {
+  width: 33%;
 }
 
 .isAdmin {
