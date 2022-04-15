@@ -52,8 +52,10 @@ form {
   display: flex;
   flex-direction: column;
 }
-form input {
+form input,
+textarea {
   margin-top: 10px;
+  width: 30%;
 }
 
 form label {
