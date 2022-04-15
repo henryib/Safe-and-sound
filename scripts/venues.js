@@ -20,7 +20,7 @@ function getAllVenues(jwt) {
 function handleResponse(data) {
     document.getElementById('loading').style.display = 'none';
     if (data['success']) {
-        document.getElementById('venues_table').style.display = block;
+        document.getElementById('venues_table').style.display = 'block';
         let table_body = document.getElementById('venues_list');
         let allRows = '';
         let objects = data['generic'];
