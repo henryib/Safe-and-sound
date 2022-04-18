@@ -257,6 +257,10 @@ table thead {
   text-align: center;
 }
 
+table thead th {
+  padding: 10px;
+}
+
 .activation {
   color: white;
   width: 100%;
