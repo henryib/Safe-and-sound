@@ -1,4 +1,4 @@
-function showDetail(e) {
+function showDetail(e, reports) {
     let modal = document.getElementById("myModal");
     modal.style.display = "block";
 
