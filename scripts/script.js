@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     socket.addEventListener('message', function (event) {
-        let report = event.data.generic;
-        console.log(event.data)
+        let data = JSON.parse(event.data);
+        let report = data.generic;
+        console.log(report)
         let table_body = document.getElementById("live_table");
         let row = '<tr><td></td></tr>'
     });
