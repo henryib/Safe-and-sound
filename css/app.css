@@ -222,7 +222,7 @@ main .general {
   background: var(--sidebar-color);
 }
 
-main table {
+table {
   background: var(--sidebar-color);
   width: 100%;
   border-radius: 2rem;
@@ -234,26 +234,27 @@ main table {
   position: relative;
 }
 
-main table tbody td {
+table tbody td {
   padding: 10px;
   border-bottom: 1px solid var(--body-color);
 }
 
-main table tbody tr:last-child td {
+table tbody tr:last-child td {
   border: none;
 }
 
-main table tbody button {
+table tbody button {
   padding: 10px;
   border-radius: 8px;
   border: none;
 }
 
-main table thead {
+table thead {
   font-weight: 600;
   position: sticky;
   top: 0;
-  background-color: white;
+  padding: 10px;
+  background-color: var(--body-color);
   text-align: center;
 }
 
