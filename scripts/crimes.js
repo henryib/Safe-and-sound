@@ -137,4 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         addCrime();
     });
+
+    document.getElementById("add").addEventListener("click", () => {
+        modal.style.display = "block";
+    });
 });

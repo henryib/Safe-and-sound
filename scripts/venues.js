@@ -138,4 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         addVenue();
     });
+
+    document.getElementById("add").addEventListener("click", () => {
+        modal.style.display = "block";
+    });
 });

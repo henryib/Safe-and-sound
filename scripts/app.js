@@ -48,8 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("close").addEventListener("click", () => {
         modal.style.display = "none";
     });
-
-    document.getElementById("add").addEventListener("click", () => {
-        modal.style.display = "block";
-    });
 });

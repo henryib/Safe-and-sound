@@ -134,4 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         addPolice();
     });
+
+    document.getElementById("add").addEventListener("click", () => {
+        modal.style.display = "block";
+    });
 });
