@@ -253,6 +253,7 @@ main table thead {
   font-weight: 600;
   position: sticky;
   top: 0;
+  background-color: white;
   text-align: center;
 }
 
