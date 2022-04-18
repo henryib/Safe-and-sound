@@ -134,15 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getAllVenues(jwt);
 
-    let modal = document.getElementById('myModal');
-    document.getElementById('close').addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    document.getElementById('add').addEventListener('click', () => {
-        modal.style.display = 'block';
-    });
-
     document.getElementById('add_venue').addEventListener('submit', (e) => {
         e.preventDefault();
         addVenue();
