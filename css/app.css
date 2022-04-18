@@ -225,7 +225,6 @@ main .general {
 table {
   background: var(--sidebar-color);
   width: 100%;
-  border-radius: 2rem;
   top: 10px;
   text-align: center;
   table-layout: fixed;
