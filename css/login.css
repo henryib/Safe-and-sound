@@ -8,6 +8,8 @@
 .box {
   width: 30%;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
   background-color: none;
   top: 50%;
   left: 50%;
@@ -44,6 +46,10 @@
 
 .box label {
   font-size: 14px;
+}
+
+.inner {
+  display: flex;
 }
 
 .box input[type="submit"] {
