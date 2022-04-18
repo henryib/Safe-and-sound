@@ -1,4 +1,7 @@
-function showDetail(e, reports) {
+let reports = [];
+let i = 0;
+
+function showDetail(e) {
     let modal = document.getElementById("myModal");
     modal.style.display = "block";
 
@@ -12,8 +15,7 @@ function showDetail(e, reports) {
 document.addEventListener('DOMContentLoaded', () => {
 
     const socket = new WebSocket('wss://safe-sound-208.herokuapp.com/reports/add/police');
-    let reports = [];
-    let i = 0;
+
 
     socket.addEventListener('message', function (event) {
         i++;
