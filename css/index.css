@@ -77,36 +77,6 @@ main .live-reports h2 {
   margin-bottom: 0.8rem;
 }
 
-main .live-reports table {
-  background: var(--sidebar-color);
-  width: 100%;
-  border-radius: 2rem;
-  padding: 1.8rem;
-  text-align: center;
-  box-shadow: 0 2rem 3rem var(--primary-color-light);
-  transition: all 300ms ease;
-}
-
-main .live-reports table:hover {
-  box-shadow: none;
-}
-
-main table tbody td {
-  height: 2.8rem;
-  border-bottom: 1px solid var(--body-color);
-}
-
-main table tbody tr:last-child td {
-  border: none;
-}
-
-main .live-reports a {
-  text-align: center;
-  display: block;
-  margin: 1rem auto;
-  text-decoration: none;
-}
-
 #myModal h2,
 #myModal h3 {
   color: var(--text-color);
