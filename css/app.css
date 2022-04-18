@@ -328,7 +328,6 @@ main .general table {
 }
 
 main table tbody td {
-  width: 33%;
   border-bottom: 1px solid var(--body-color);
   padding: 10px 10px;
 }
@@ -403,7 +402,7 @@ main table thead {
   margin: 15% auto;
   padding: 20px;
   border-radius: 12px;
-  width: 50%;
+  width: 30%;
 }
 
 #close {

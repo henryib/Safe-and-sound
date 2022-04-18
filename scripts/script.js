@@ -14,4 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
         table_body.innerHTML += row;
     });
 
+
+    let modal = document.getElementById("myModal");
+    let detail_btn = document.getElementById("more");
+    detail_btn.addEventListener("click", () => {
+        modal.style.display = "block";
+        let id = detail_btn.id;
+        document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
+        document.getElementById("detail").innerText = reports[id].report_details;
+        document.getElementById("location").innerText = reports[id].report_location[0] + ", " + reports[id].report_location[1];
+        document.getElementById("severity").innerText = reports[id].report_severity;
+    });
+
+
 });

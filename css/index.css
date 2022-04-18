@@ -106,3 +106,8 @@ main .live-reports a {
   margin: 1rem auto;
   text-decoration: none;
 }
+
+#myModal h2,
+#myModal h3 {
+  color: var(--text-color);
+}
