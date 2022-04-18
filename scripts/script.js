@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reports.push(report);
         let date = report.report_date.replace("T", " ");
         let table_body = document.getElementById("live_table");
-        let row = `<tr><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button class="more" id="${i}"><i class='bx bx-detail'></i></button></td></tr>`;
+        let row = `<tr><td>${report.report_id}</td><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button class="more" id="${i}"><i class='bx bx-detail'></i></button></td></tr>`;
         table_body.innerHTML += row;
     });
 
