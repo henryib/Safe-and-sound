@@ -387,7 +387,6 @@ main table thead {
 }
 
 .modal {
-  border-radius: 12px;
   display: none;
   position: fixed;
   z-index: 1;
@@ -403,12 +402,13 @@ main table thead {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border-radius: 12px;
   width: 50%;
 }
 
 .close {
-  color: #aaa;
+  color: #aaaaaa;
+  float: right;
   font-size: 28px;
   font-weight: bold;
 }
