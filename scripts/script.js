@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let modal = document.getElementById("myModal");
-    let detail_btn = document.getElementById("more");
+    let detail_btn = document.getElementsByClassName("more");
     detail_btn.addEventListener("click", () => {
         modal.style.display = "block";
         let id = detail_btn.id;
