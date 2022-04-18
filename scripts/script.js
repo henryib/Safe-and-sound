@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    function showDetail(e) {
+        let modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        let id = e.id;
+        document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
+        document.getElementById("detail").innerText = reports[id].report_details;
+        document.getElementById("location").innerText = reports[id].report_location[0] + ", " + reports[id].report_location[1];
+        document.getElementById("severity").innerText = reports[id].report_severity;
+    }
+
     const socket = new WebSocket('wss://safe-sound-208.herokuapp.com/reports/add/police');
     let reports = [];
     let i = 0;
@@ -10,21 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reports.push(report);
         let date = report.report_date.replace("T", " ");
         let table_body = document.getElementById("live_table");
-        let row = `<tr><td>${report.report_id}</td><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button class="more" id="${i}"><i class='bx bx-detail'></i></button></td></tr>`;
+        let row = `<tr><td>${report.report_id}</td><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button onClick="showDetail(this)" class="more" id="${i}"><i class='bx bx-detail'></i></button></td></tr>`;
         table_body.innerHTML += row;
     });
-
-
-    let modal = document.getElementById("myModal");
-    let detail_btn = document.getElementsByClassName("more");
-    detail_btn.addEventListener("click", () => {
-        modal.style.display = "block";
-        let id = detail_btn.id;
-        document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
-        document.getElementById("detail").innerText = reports[id].report_details;
-        document.getElementById("location").innerText = reports[id].report_location[0] + ", " + reports[id].report_location[1];
-        document.getElementById("severity").innerText = reports[id].report_severity;
-    });
-
-
 });
