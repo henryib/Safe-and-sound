@@ -94,55 +94,55 @@
     <section class="home">
       <main class="home">
         <div id="myModal" class="modal">
-           <div class="modal-content">
-             <span id="close">&times;</span>
-             <form id="add_crimes" class="box" autocomplete="off"> 
-               <h1>Add Crimes</h1>
+          <div class="modal-content">
+            <span id="close">&times;</span>
+            <form id="add_crimes" class="box" autocomplete="off">
+              <h1>Add Crimes</h1>
               <input
-        type="text"
-        id="crime_name"
-        placeholder="Crime Name"
-        minlength="2"
-        maxlength="30"
-        pattern="[a-zA-Z ]+"
-        title="Please enter a valid name"
-        required
-      />
+                type="text"
+                id="crime_name"
+                placeholder="Crime Name"
+                minlength="2"
+                maxlength="30"
+                pattern="[a-zA-Z ]+"
+                title="Please enter a valid name"
+                required
+              />
 
-       <textarea
-        type="multiline"
-        id="crime_description"
-        placeholder="Crime Description"
-        minlength="10"
-        maxlength="100"
-        rows="4"
-        pattern="[0-9a-zA-Z ]+"
-        title="Please enter a valid Description"
-        required
-        ></textarea>
-      <input
-      type="text"
-      id="crime_severity"
-      placeholder="Crime Severity"
-      minlength="1"
-      maxlength="1"
-      pattern="[12345]+"
-      title="Please enter a valid severity - 1,2,3,4,5"
-      required
-      />
-      <input type="submit" value="Submit" />
-    </form>
-            </div>
+              <textarea
+                type="multiline"
+                id="crime_description"
+                placeholder="Crime Description"
+                minlength="10"
+                maxlength="100"
+                rows="4"
+                pattern="[0-9a-zA-Z ]+"
+                title="Please enter a valid Description"
+                required
+              ></textarea>
+              <input
+                type="text"
+                id="crime_severity"
+                placeholder="Crime Severity"
+                minlength="1"
+                maxlength="1"
+                pattern="[12345]+"
+                title="Please enter a valid severity - 1,2,3,4,5"
+                required
+              />
+              <input type="submit" value="Submit" />
+            </form>
           </div>
+        </div>
         <h1>Crimes</h1>
         <div class="general">
-          <button id="add"><i class='bx bxs-plus-circle'></i></button>
+          <button id="add"><i class="bx bxs-plus-circle"></i></button>
           <div class="loading_wrapper"><div id="loading"></div></div>
           <div id="response"></div>
           <table id="crimes_table">
             <thead>
               <th>Name</th>
-              <th>Description</td>
+              <th>Description</th>
               <th>Active</th>
             </thead>
             <tbody id="crimes_list"></tbody>

@@ -234,6 +234,7 @@ table {
 }
 
 table tbody td {
+  width: auto;
   padding: 10px;
   border-bottom: 1px solid var(--body-color);
 }

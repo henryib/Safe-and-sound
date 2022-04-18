@@ -94,46 +94,46 @@
     <section class="home">
       <main class="home">
         <div id="myModal" class="modal">
-           <div class="modal-content">
-             <span id="close">&times;</span>
-             <form id="add_police" class="box" autocomplete="off"> 
-               <h1>Register</h1>
+          <div class="modal-content">
+            <span id="close">&times;</span>
+            <form id="add_police" class="box" autocomplete="off">
+              <h1>Register</h1>
               <input
-        type="text"
-        id="badgenumber"
-        placeholder="Badge number"
-        minlength="6"
-        maxlength="6"
-        pattern="[0-9]+"
-        title="Please enter your 6 digit badge number"
-        required
-      />
+                type="text"
+                id="badgenumber"
+                placeholder="Badge number"
+                minlength="6"
+                maxlength="6"
+                pattern="[0-9]+"
+                title="Please enter your 6 digit badge number"
+                required
+              />
 
-      <input
-        type="password"
-        id="password"
-        placeholder="Password"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-        required
-      />
-      <div class="check">
-        <input type="checkbox" id="admin"/>
-        <label for="checkbox">Is Admin?</label>
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
-            </div>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required
+              />
+              <div class="check">
+                <input type="checkbox" id="admin" />
+                <label for="checkbox">Is Admin?</label>
+              </div>
+              <input type="submit" value="Submit" />
+            </form>
           </div>
+        </div>
         <h1>Management</h1>
         <div class="general">
-          <button id="add"><i class='bx bxs-plus-circle'></i></button>
+          <button id="add"><i class="bx bxs-plus-circle"></i></button>
           <div class="loading_wrapper"><div id="loading"></div></div>
           <div id="response"></div>
           <table id="police_table">
             <thead>
               <th>Badge</th>
-              <th>Admin</td>
+              <th>Admin</th>
               <th>Active</th>
             </thead>
             <tbody id="police_list"></tbody>
