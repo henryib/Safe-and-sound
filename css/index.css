@@ -69,13 +69,11 @@ main .insights small {
   margin-top: 1.3rem;
 }
 
-/* ------------------------------- Live reports  -------------------------------*/
-
 main .live-reports {
   margin-top: 2rem;
 }
 
-main.live-reports h2 {
+main .live-reports h2 {
   margin-bottom: 0.8rem;
 }
 
