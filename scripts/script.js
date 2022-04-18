@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-    function showDetail(e) {
-        let modal = document.getElementById("myModal");
-        modal.style.display = "block";
+function showDetail(e) {
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
 
-        let id = e.id;
-        document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
-        document.getElementById("detail").innerText = reports[id].report_details;
-        document.getElementById("location").innerText = reports[id].report_location[0] + ", " + reports[id].report_location[1];
-        document.getElementById("severity").innerText = reports[id].report_severity;
-    }
+    let id = e.id;
+    document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
+    document.getElementById("detail").innerText = reports[id].report_details;
+    document.getElementById("location").innerText = reports[id].report_location[0] + ", " + reports[id].report_location[1];
+    document.getElementById("severity").innerText = reports[id].report_severity;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
 
     const socket = new WebSocket('wss://safe-sound-208.herokuapp.com/reports/add/police');
     let reports = [];
