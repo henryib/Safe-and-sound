@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     socket.addEventListener('message', function (event) {
         let data = JSON.parse(event.data);
         let report = data.generic;
-        console.log(report)
+        let date = report.report_date.replace("T", " ");
         let table_body = document.getElementById("live_table");
-        let row = '<tr><td></td></tr>'
+        let row = `<tr><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button class="more" id="${report.report_id}"><i class='bx bx-detail'></i></button></td></tr>`;
+        table_body.innerHTML += row;
     });
 
 });
