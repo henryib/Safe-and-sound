@@ -90,5 +90,8 @@ main .live-reports h2 {
   color: white;
   border-radius: 8px;
   border: none;
+  font-weight: 600;
+  font-size: 1.1em;
   padding: 10px;
+  cursor: pointer;
 }
