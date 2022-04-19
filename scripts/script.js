@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let date = report.report_date.replace("T", " ");
         let table_body = document.getElementById("live_table");
         let table_index = document.getElementById("table_index");
-        let tr = table_body.insertRow(1);
+        let tr = table_body.insertRow(0);
         let row = `<td>${report.report_id}</td><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button onclick="showDetail(this)" class="more" id="${i}"><i class='bx bx-detail'></i></button></td>`;
         tr.innerHTML = row;
         i++;
