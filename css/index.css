@@ -80,4 +80,13 @@ main .live-reports h2 {
 #myModal h2,
 #myModal h3 {
   color: var(--text-color);
+  margin-top: 10px;
+}
+
+#myModal button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: var(--error-red);
+  color: white;
+  border-radius: 8px;
 }
