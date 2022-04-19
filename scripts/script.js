@@ -14,6 +14,10 @@ function showDetail(e) {
     document.getElementById("severity").innerText = reports[id].report_severity;
 }
 
+function closeReport() {
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const socket = new WebSocket('wss://safe-sound-208.herokuapp.com/reports/add/police');
 
@@ -23,9 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         reports.push(report);
         let date = report.report_date.replace("T", " ");
         let table_body = document.getElementById("live_table");
-        let tr = table_body.insertRow(-1)
+        let rows = table_body.insertRow(-1);
+        let tr = createElement('tr');
         let row = `<td>${report.report_id}</td><td>${report.report_user}</td><td>${report.report_phone}</td><td>${date}</td><td>${report.report_type}</td><td>${report.report_venue}</td><td><button onclick="showDetail(this)" class="more" id="${i}"><i class='bx bx-detail'></i></button></td>`;
-        tr.innerHTML(row);
+        tr.innerHtml = row;
+        rows.appendChild(tr);
         i++;
     });
 });
