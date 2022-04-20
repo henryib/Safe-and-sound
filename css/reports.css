@@ -1,0 +1,18 @@
+#myModal h2,
+#myModal h3 {
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+#myModal button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: var(--error-red);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 10px;
+  cursor: pointer;
+}
