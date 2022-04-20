@@ -44,7 +44,7 @@ function handleResponse(data) {
             data['message'] + '<br><br>' + 'Page will reload in 2 seconds';
         setTimeout(() => {
             location.reload();
-        }, 2000);
+        }, 100000);
     }
 }
 
