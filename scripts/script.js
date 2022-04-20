@@ -36,7 +36,7 @@ function handleResolve(data) {
         alert("Report deactivated");
         setTimeout(() => {
             location.reload();
-        }, 3000)
+        }, 2000)
     } else {
         alert(data["message"]);
     }
