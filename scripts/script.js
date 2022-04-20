@@ -33,8 +33,10 @@ function closeReport() {
 function handleResolve(data) {
     if (data["success"]) {
         document.getElementById("myModal").style.display = "none";
-        let table_body = document.getElementById("live_table");
-        table_body.deleteRow(reports.length - i - 1);
+        alert("Report deactivated");
+        setTimeout(() => {
+            location.reload();
+        }, 3000)
     } else {
         alert(data["message"]);
     }
