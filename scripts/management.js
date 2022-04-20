@@ -39,10 +39,10 @@ function handleResponse(data) {
     } else {
         let response = document.getElementById("response");
         response.style.display = "block";
-        response.innerHTML = data["message"] + "<br><br>" + "Page will reload in 10 seconds";
+        response.innerHTML = data["message"] + "<br><br>" + "Page will reload in 2 seconds";
         setTimeout(() => {
             location.reload();
-        }, 10000)
+        }, 2000)
     }
 }
 
@@ -117,10 +117,10 @@ function handleRegistration(data) {
     if (success) {
         let modal = document.getElementById("myModal");
         modal.style.display = "none";
-        alert(message);
+        alert(message + "\n Page will reload in 2 secs");
         setTimeout(() => {
             location.reload();
-        }, 3000);
+        }, 1500);
     } else {
         alert(message);
     }

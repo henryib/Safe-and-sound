@@ -74,7 +74,7 @@ function handleResponse(data) {
     document.getElementById("change_btn").style.display = "block";
     setTimeout(() => {
         responseDisplay.style.display = "none";
-    }, 3000);
+    }, 1500);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

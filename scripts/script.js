@@ -36,10 +36,10 @@ function closeReport() {
 function handleResolve(data) {
     if (data["success"]) {
         document.getElementById("myModal").style.display = "none";
-        alert("Report deactivated");
+        alert("Report deactivated\n Page will reload in 2 secs");
         setTimeout(() => {
             location.reload();
-        }, 2000)
+        }, 1500)
     } else {
         alert(data["message"]);
     }
