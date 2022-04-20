@@ -14,13 +14,13 @@ function getReports(jwt) {
         }
     })
         .then((response) => response.json())
-        .then((data) => handleGetReports(data, jwt))
+        .then((data) => handleGetReports(data))
         .catch(function (error) {
             console.log(error);
         });
 }
 
-function handleGetReports() {
+function handleGetReports(data) {
     document.getElementById('loading').style.display = 'none';
     if (data['success']) {
         document.getElementById('table_reports').style.display = 'block';
