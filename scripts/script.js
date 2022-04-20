@@ -2,6 +2,7 @@ let reports = [];
 let i = 0;
 let report_id;
 
+//show the details of the report inside the modal
 function showDetail(e) {
     let modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -13,6 +14,7 @@ function showDetail(e) {
     document.getElementById("severity").innerText = reports[id].report_severity;
 }
 
+//close a report, update resolved to true
 function closeReport() {
     let jwt = localStorage.getItem('jwt');
     fetch(`https://safe-sound-208.herokuapp.com/reports/resolve/${report_id}`, {
@@ -30,6 +32,7 @@ function closeReport() {
         });
 }
 
+//handle server response from closing the report
 function handleResolve(data) {
     if (data["success"]) {
         document.getElementById("myModal").style.display = "none";
@@ -45,6 +48,8 @@ function handleResolve(data) {
 document.addEventListener('DOMContentLoaded', () => {
     const socket = new WebSocket('wss://safe-sound-208.herokuapp.com/reports/add/police');
 
+    //when websocket receives a message from the server 
+    //add row to table with its info
     socket.addEventListener('message', function (event) {
         let data = JSON.parse(event.data);
         let report = data.generic;

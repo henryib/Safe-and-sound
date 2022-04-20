@@ -1,3 +1,4 @@
+//get all the policeman from the server
 function getAllPolice(jwt) {
     fetch('https://safe-sound-208.herokuapp.com/police', {
         method: 'GET',
@@ -14,6 +15,7 @@ function getAllPolice(jwt) {
         });
 }
 
+//handle the server response from trying to get all policeman
 function handleResponse(data) {
     document.getElementById("loading").style.display = "none";
     if (data["success"]) {
@@ -44,6 +46,7 @@ function handleResponse(data) {
     }
 }
 
+//handling the activation button clicks
 function activationHandle(evt) {
     document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem("jwt");
@@ -72,6 +75,7 @@ function activationHandle(evt) {
         });
 }
 
+//handle the server response from trying to change the active status
 function handleResponseActivation(data, button) {
     if (data["success"]) {
         location.reload();
@@ -80,6 +84,7 @@ function handleResponseActivation(data, button) {
     }
 }
 
+//add a policeman to the database
 function addPolice() {
     let jwt = localStorage.getItem("jwt");
     let badge = document.getElementById("badgenumber").value;
@@ -105,6 +110,7 @@ function addPolice() {
         });
 }
 
+//handle the response from adding a new user
 function handleRegistration(data) {
     let success = data["success"];
     let message = data["message"];
@@ -136,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let modal = document.getElementById("myModal");
-
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
     });

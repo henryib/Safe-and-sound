@@ -48,7 +48,7 @@ function handleResponse(data) {
     }
 }
 
-// Activating/Validating a venue?
+// Activating/Validating a venue
 function activationHandle(evt) {
     document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem('jwt');
@@ -112,7 +112,7 @@ function addVenue() {
         });
 }
 
-// Handle the response from adding a venue:
+// Handle the response from adding a venue
 function handleAdd(data) {
     let success = data['success'];
     let message = data['message'];

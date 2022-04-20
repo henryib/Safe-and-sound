@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let modal = document.getElementById("myModal");
-
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
     });

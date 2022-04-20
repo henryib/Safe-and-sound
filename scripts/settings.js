@@ -1,3 +1,4 @@
+//change password visibility
 function passwordToggle() {
     var password = document.getElementById('password');
     var newPassword = document.getElementById('new-password');
@@ -10,6 +11,7 @@ function passwordToggle() {
     }
 }
 
+//validate the form
 function validateForm(password, newPassword) {
     let valid = true;
     if (password !== newPassword) {
@@ -18,6 +20,7 @@ function validateForm(password, newPassword) {
     return (valid);
 }
 
+//handling the change password request
 function handleChangeRequest(password, newPassword, jwt) {
     let responseDisplay = document.getElementById("response");
     responseDisplay.style.display = "none";
@@ -32,6 +35,7 @@ function handleChangeRequest(password, newPassword, jwt) {
     }
 };
 
+//update password in the server
 function changePassword(password, jwt) {
     fetch('https://safe-sound-208.herokuapp.com/police/password', {
         method: 'POST',
@@ -51,6 +55,7 @@ function changePassword(password, jwt) {
         });
 }
 
+//handle server response on trying to change password
 function handleResponse(data) {
     let success = data["success"];
     let message = data["message"];
