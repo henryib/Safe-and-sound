@@ -5,7 +5,6 @@ let report_id;
 function showDetail(e) {
     let modal = document.getElementById("myModal");
     modal.style.display = "block";
-
     let id = e.id;
     report_id = reports[id].report_id;
     document.getElementById("id").innerText = `Details for report #${reports[id].report_id}`;
@@ -16,7 +15,6 @@ function showDetail(e) {
 
 function closeReport() {
     let jwt = localStorage.getItem('jwt');
-
     fetch(`https://safe-sound-208.herokuapp.com/reports/resolve/${report_id}`, {
         method: 'POST',
         headers: {
@@ -33,7 +31,13 @@ function closeReport() {
 }
 
 function handleResolve(data) {
-    console.log(data);
+    if (data["success"]) {
+        document.getElementById("myModal").style.display = "none";
+        let table_body = document.getElementById("live_table");
+        table_body.deleteRow(reports.length - i);
+    } else {
+        alert(data["message"]);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
