@@ -34,7 +34,7 @@ function handleResolve(data) {
     if (data["success"]) {
         document.getElementById("myModal").style.display = "none";
         let table_body = document.getElementById("live_table");
-        table_body.deleteRow(reports.length - i);
+        table_body.deleteRow(i);
     } else {
         alert(data["message"]);
     }
