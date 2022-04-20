@@ -68,4 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             closeReport();
         }
     });
+
+    document.getElementById("close").addEventListener("click", () => {
+        modal.style.display = "none";
+    });
 });
