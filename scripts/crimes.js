@@ -142,4 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
     });
+
+    document.getElementById("close").addEventListener("click", () => {
+        modal.style.display = "none";
+    });
 });

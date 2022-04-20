@@ -99,4 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
             closeReport();
         }
     });
+
+    //on button close click hide modal
+    let modal = document.getElementById("myModal");
+
+    document.getElementById("close").addEventListener("click", () => {
+        modal.style.display = "none";
+    });
 });
