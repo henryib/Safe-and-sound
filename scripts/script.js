@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let modal = getElementById("myModal");
     document.getElementById("close").addEventListener("click", () => {
         modal.style.display = "none";
     });
