@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="css/app.css" />
@@ -18,7 +19,7 @@
     <title>Safe & Sound</title>
   </head>
   <body>
-    <nav class="sidebar close">
+    <nav class="sidebar">
       <header>
         <div class="image-text">
           <span class="image">
@@ -64,7 +65,7 @@
               </a>
             </li>
 
-            <li class="nav-link">
+            <li class="nav-link" id="management">
               <a href="management.html">
                 <i class="bx bx-lock-alt icon"></i>
                 <span class="text nav-text">Management</span>
@@ -86,133 +87,43 @@
               <span class="text nav-text">Logout</span>
             </a>
           </li>
-
-          <li class="mode">
-            <div class="sun-moon">
-              <i class="bx bx-moon icon moon"></i>
-              <i class="bx bx-sun icon sun"></i>
-            </div>
-            <span class="mode-text text">Dark mode</span>
-
-            <div class="toggle-switch">
-              <span class="switch"></span>
-            </div>
-          </li>
         </div>
       </div>
     </nav>
 
     <section class="home">
       <main class="home">
-        <h1>Dashboard</h1>
-        <div class="insights">
-          <!-- start of sales-->
-          <div class="sales">
-            <div class="middle">
-              <div class="left">
-                <h3>Total Cases</h3>
-                <h1>3456</h1>
-              </div>
-              <div class="right">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="percent">
-                  <p>80%</p>
-                </div>
-              </div>
-            </div>
-            <small class="text-muted">last 24 hours</small>
-          </div>
-          <!-- end of sales-->
-          <div class="expenses">
-            <div class="middle">
-              <div class="left">
-                <h3>Cases Resolved</h3>
-                <h1>378</h1>
-              </div>
-              <div class="right">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="percent">
-                  <p>20%</p>
-                </div>
-              </div>
-            </div>
-            <small class="text-muted">last 24 hours</small>
-          </div>
-          <!-- end of expenses-->
-          <div class="income">
-            <div class="middle">
-              <div class="left">
-                <h3>Relative Increase in cases</h3>
-                <h1></h1>
-              </div>
-              <div class="right">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="percent">
-                  <p>50%</p>
-                </div>
-              </div>
-            </div>
-            <small class="text-muted">last 24 hours</small>
-          </div>
-          <!-- end of income-->
-        </div>
         <div class="live-reports">
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span id="close">&times;</span>
+              <h2 id="id"></h2>
+              <h3>Severity:</h3>
+              <p id="severity"></p>
+              <h3>Location:</h3>
+              <p id="location"></p>
+              <h3>Detail:</h3>
+              <p id="detail"></p>
+              <button id="report_resolve">Close Report</button>
+            </div>
+          </div>
           <h2>Live reports</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>NHS number</th>
-                <th>Urgency level</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Henry</td>
-                <td>123 456 7890</td>
-                <td>Red</td>
-                <td class="unresolved">Unsreloved</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Henry</td>
-                <td>123 456 7890</td>
-                <td>Red</td>
-                <td class="unresolved">Unsreloved</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Henry</td>
-                <td>123 456 7890</td>
-                <td>Red</td>
-                <td class="unresolved">Unsreloved</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Henry</td>
-                <td>123 456 7890</td>
-                <td>Red</td>
-                <td class="unresolved">Unsreloved</td>
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Henry</td>
-                <td>123 456 7890</td>
-                <td>Red</td>
-                <td class="unresolved">Unsreloved</td>
-                <td class="primary">Details</td>
-              </tr>
-            </tbody>
-          </table>
-          <a href="#">View All</a>
+          <div class="general">
+            <table id="table_index">
+              <thead>
+                <tr>
+                  <th>Report ID</th>
+                  <th>User</th>
+                  <th>Phone</th>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Venue</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="live_table"></tbody>
+            </table>
+          </div>
         </div>
       </main>
     </section>

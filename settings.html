@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="css/app.css" />
@@ -18,7 +19,7 @@
     <title>Safe & Sound</title>
   </head>
   <body>
-    <nav class="sidebar close">
+    <nav class="sidebar">
       <header>
         <div class="image-text">
           <span class="image">
@@ -64,7 +65,7 @@
               </a>
             </li>
 
-            <li class="nav-link">
+            <li class="nav-link" id="management">
               <a href="management.html">
                 <i class="bx bx-lock-alt icon"></i>
                 <span class="text nav-text">Management</span>
@@ -86,33 +87,19 @@
               <span class="text nav-text">Logout</span>
             </a>
           </li>
-
-          <li class="mode">
-            <div class="sun-moon">
-              <i class="bx bx-moon icon moon"></i>
-              <i class="bx bx-sun icon sun"></i>
-            </div>
-            <span class="mode-text text">Dark mode</span>
-
-            <div class="toggle-switch">
-              <span class="switch"></span>
-            </div>
-          </li>
         </div>
       </div>
     </nav>
     <section class="home">
       <main class="home">
-        <div class="settings">
-          <h1>Settings</h1>
-
+        <h1>Settings</h1>
+        <div class="general">
           <form id="change-pass" class="box">
             <span>Change Password:</span>
 
             <input
               type="password"
               id="password"
-              name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
               placeholder="Password"
@@ -122,7 +109,6 @@
             <input
               type="password"
               id="new-password"
-              name="new-password"
               placeholder="New Password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -131,8 +117,9 @@
 
             <input type="checkbox" id="checkbox" onclick="passwordToggle()" />
             <label for="checkbox">Show Password</label>
-
-            <input type="submit" name="" value="Submit" />
+            <div id="response"></div>
+            <div class="loading-wrapper"><div id="loading"></div></div>
+            <input type="submit" id="change_btn" value="Submit" />
           </form>
         </div>
       </main>

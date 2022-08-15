@@ -1,50 +1,28 @@
-/* ------------------------------- main  -------------------------------*/
-
-main {
-  margin-top: 1.4rem;
+form {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  margin-top: 10px;
 }
 
-/* ------------------------------- Settings  -------------------------------*/
-
-main .password {
-  text-align: center;
+form label {
+  margin-top: 10px;
 }
 
-main span {
-  padding-right: 10rem;
+.check {
+  display: flex;
+  flex-direction: row;
 }
 
-main .password input[type="password"],
-main .password input[type="text"] {
+form input[type="submit"] {
+  padding: 10px;
+  border-radius: 8px;
   border: none;
-  background: white;
-  padding: 14px 10px;
-  width: 200px;
-  display: inline-block;
-  margin: 10px auto;
-  text-align: left;
-  border-radius: 24px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  outline: none;
-}
-
-main label {
-  font-size: 14px;
-}
-
-main .password input[type="submit"] {
-  border: none;
-  color: #eeb7d5;
-  border-radius: 24px;
-  margin: 20px auto;
-  padding: 14px 10px;
-  width: 100px;
-  background: white;
+  background-color: var(--admin);
   cursor: pointer;
-}
-
-main .password input[type="submit"]:hover {
-  color: #eeb7d5;
-  background: #7f88c0;
 }

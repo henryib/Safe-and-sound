@@ -38,13 +38,15 @@ function login(badge, password) {
 //handles the response from the server
 //either displays error or goes to main page
 function handleResponse(data) {
+    let responseDisplay = document.getElementById("response");
     let response = data["success"];
     let message = data["message"];
+    let police = data["generic"];
     if (response) {
         localStorage.setItem("jwt", message);
+        localStorage.setItem("police", JSON.stringify(police))
         location.replace("https://joaogarrido98.github.io/Safe-and-sound/index.html");
     } else {
-        let responseDisplay = document.getElementById("response");
         responseDisplay.style.display = "block";
         responseDisplay.innerHTML = message;
         document.getElementById("loading").style.display = "none";

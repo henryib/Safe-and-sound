@@ -1,6 +1,6 @@
-// Fetch all the venues
-function getAllVenues(jwt) {
-    fetch('https://safe-sound-208.herokuapp.com/police/venues', {
+// Fetch all the crimes
+function getAllCrimes(jwt) {
+    fetch('https://safe-sound-208.herokuapp.com/police/crimes', {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -15,25 +15,25 @@ function getAllVenues(jwt) {
         });
 }
 
-// Handle post request after fetching all the venues.
+// Handle post request after fetching all the crimes.
 // Fill the table with the data fetched.
 function handleResponse(data) {
     document.getElementById('loading').style.display = 'none';
     if (data['success']) {
-        document.getElementById('venues_table').style.display = 'block';
-        let table_body = document.getElementById('venues_list');
+        document.getElementById('crimes_table').style.display = 'block';
+        let table_body = document.getElementById('crimes_list');
         let allRows = '';
         let objects = data['generic'];
         for (let i = 0; i < objects.length; i++) {
-            let venue = objects[i];
-            let venue_name = venue['venue_name'];
-            let venue_location = venue['venue_city'];
-            let venue_active = venue['venue_active'] ? 'Active' : 'Deactivated';
-            let button_class_activation = venue['venue_active'] ? 'active' : 'deactivated';
+            let crime = objects[i];
+            let crime_name = crime['crime_name'];
+            let crime_description = crime['crime_description'];
+            let crime_active = crime['crime_active'] ? 'Active' : 'Deactivated';
+            let button_class_activation = crime['crime_active'] ? 'active' : 'deactivated';
             allRows += `<tr>
-        <td class="venue_name">${venue_name}</td>
-        <td class="venue_location">${venue_location}</td>
-        <td class="venue_active"><button id="${venue["venue_id"]}" onClick="activationHandle(event)" class="${button_class_activation} activation">${venue_active}</button></td>
+        <td class="crime_name">${crime_name}</td>
+        <td class="crime_description">${crime_description}</td>
+        <td class="crime_active"><button id="${crime["crime_id"]}" onClick="activationHandle(event)" class="${button_class_activation} activation">${crime_active}</button></td>
         </tr>`;
         }
         table_body.innerHTML = allRows;
@@ -48,18 +48,18 @@ function handleResponse(data) {
     }
 }
 
-// Activating/Validating a venue
+// Activating/Validating a crime
 function activationHandle(evt) {
     document.getElementById('loading').style.display = 'none';
     let jwt = localStorage.getItem('jwt');
-    let venue = evt.target.id;
+    let crime = evt.target.id;
     let type = null;
     if (evt.target.classList.contains('active')) {
         type = 'deactivate';
     } else {
         type = 'activate';
     }
-    fetch(`https://safe-sound-208.herokuapp.com/venues/${type}/${venue}`, {
+    fetch(`https://safe-sound-208.herokuapp.com/crimes/${type}/${crime}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -68,13 +68,13 @@ function activationHandle(evt) {
         }
     })
         .then((response) => response.json())
-        .then((data) => handleResponseActivation(data, evt.target))
+        .then((data) => handleResponseActivation(data))
         .catch(function (error) {
             console.log(error);
         });
 }
 
-// Handling response from activating/deactivation of venue
+// Handling response from activating/deactivation of crime
 function handleResponseActivation(data) {
     if (data['success']) {
         location.reload();
@@ -83,15 +83,14 @@ function handleResponseActivation(data) {
     }
 }
 
-// Adding a new venue
-function addVenue() {
+// Adding a new crime
+function addCrime() {
     let jwt = localStorage.getItem('jwt');
-    let venue_name = document.getElementById("venue_name").value;
-    let venue_city = document.getElementById("venue_city").value;
-    let venue_lat = document.getElementById("venue_lat").value;
-    let venue_long = document.getElementById("venue_long").value;
+    let crime_name = document.getElementById("crime_name").value;
+    let crime_description = document.getElementById("crime_description").value;
+    let crime_severity = document.getElementById("crime_severity").value;
 
-    fetch(`https://safe-sound-208.herokuapp.com/venues/add`, {
+    fetch(`https://safe-sound-208.herokuapp.com/crimes/add`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -99,10 +98,9 @@ function addVenue() {
             Authorization: `Bearer ${jwt}`
         },
         body: JSON.stringify({
-            venue_city: venue_city,
-            venue_lat: venue_lat,
-            venue_long: venue_long,
-            venue_name: venue_name
+            crime_name: crime_name,
+            crime_description: crime_description,
+            crime_severity: crime_severity
         })
     })
         .then((response) => response.json())
@@ -112,7 +110,7 @@ function addVenue() {
         });
 }
 
-// Handle the response from adding a venue
+// Handle the response from adding a crime:
 function handleAdd(data) {
     let success = data['success'];
     let message = data['message'];
@@ -128,19 +126,19 @@ function handleAdd(data) {
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('loading').style.display = 'block';
     let jwt = localStorage.getItem('jwt');
 
-    getAllVenues(jwt);
+    getAllCrimes(jwt);
 
-    document.getElementById('add_venue').addEventListener('submit', (e) => {
+    document.getElementById('add_crimes').addEventListener('submit', (e) => {
         e.preventDefault();
-        addVenue();
+        addCrime();
     });
 
     let modal = document.getElementById("myModal");
-
     document.getElementById("add").addEventListener("click", () => {
         modal.style.display = "block";
     });

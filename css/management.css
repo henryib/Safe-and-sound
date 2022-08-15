@@ -1,5 +1,13 @@
-#venues_table {
+#police_table {
   display: none;
+}
+
+.isAdmin {
+  background-color: var(--admin);
+}
+
+.isRegular {
+  background-color: var(--no-admin);
 }
 
 .active {
@@ -27,6 +35,11 @@ textarea {
 
 form label {
   margin-top: 10px;
+}
+
+.check {
+  display: flex;
+  flex-direction: row;
 }
 
 form input[type="submit"] {

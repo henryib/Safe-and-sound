@@ -8,6 +8,8 @@
 .box {
   width: 30%;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
   background-color: none;
   top: 50%;
   left: 50%;
@@ -46,6 +48,10 @@
   font-size: 14px;
 }
 
+.inner {
+  display: flex;
+}
+
 .box input[type="submit"] {
   border: 2px solid #7f88c0;
   font-weight: 600;
@@ -64,45 +70,4 @@
   transition: 0.3s ease-in-out;
   color: #eeb7d5;
   background: #7f88c0;
-}
-
-#response {
-  display: none;
-  width: 95%;
-  margin-top: 20px;
-  border: 2px solid #bf314a;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #f7dfe3;
-}
-.loading-wrapper {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-#loading {
-  display: none;
-  width: 30px;
-  height: 30px;
-  border: 5px solid #7f88c0;
-  border-radius: 50%;
-  border-top-color: #fff;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
 }

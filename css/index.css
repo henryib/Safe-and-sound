@@ -1,9 +1,3 @@
-/* ------------------------------- main  -------------------------------*/
-
-main {
-  margin-top: 1.4rem;
-}
-
 main .insights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,42 +69,29 @@ main .insights small {
   margin-top: 1.3rem;
 }
 
-/* ------------------------------- Live reports  -------------------------------*/
-
 main .live-reports {
   margin-top: 2rem;
 }
 
-main.live-reports h2 {
+main .live-reports h2 {
   margin-bottom: 0.8rem;
 }
 
-main .live-reports table {
-  background: var(--sidebar-color);
+#myModal h2,
+#myModal h3 {
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+#myModal button {
+  margin-top: 10px;
   width: 100%;
-  border-radius: 2rem;
-  padding: 1.8rem;
-  text-align: center;
-  box-shadow: 0 2rem 3rem var(--primary-color-light);
-  transition: all 300ms ease;
-}
-
-main .live-reports table:hover {
-  box-shadow: none;
-}
-
-main table tbody td {
-  height: 2.8rem;
-  border-bottom: 1px solid var(--body-color);
-}
-
-main table tbody tr:last-child td {
+  background-color: var(--error-red);
+  color: white;
+  border-radius: 8px;
   border: none;
-}
-
-main .live-reports a {
-  text-align: center;
-  display: block;
-  margin: 1rem auto;
-  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 10px;
+  cursor: pointer;
 }
